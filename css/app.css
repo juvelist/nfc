@@ -358,6 +358,5 @@ button {
   cursor: pointer; }
 
 body, select, option, button, textarea {
-  color: black;
-  font: 400 16px helvetica-neue-regular, sans-serif;
-  line-height: 1.5; }
+  color: #FFFFFF;
+  font: 400 24px/1.5 'Poppins', sans-serif; }
