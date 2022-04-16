@@ -17,7 +17,6 @@ main {
   margin-right: auto;
   max-width: 90%;
   width: 1062px;
-  //outline: 1px solid lightskyblue; //
 }
 
 .card {
@@ -46,6 +45,7 @@ main {
     font: 400 24px/1.5 'Poppins', sans-serif;
     position: relative;
     padding-right: 14px;
+    text-transform: capitalize;
     &:before {
       bottom: 30%;
       background: no-repeat center/contain url('../img/arrow_icon.svg');
@@ -76,6 +76,7 @@ main {
   &__item {
     font: 400 20px/1.5 'Poppins', sans-serif;
     opacity: .7;
+    text-transform: capitalize;
   }
 }
 
@@ -137,6 +138,67 @@ main {
   &__desc {
     font: 700 16px/1.5 'Poppins', sans-serif;
     transition: opacity .3s ease;
+  }
+}
+
+// timeline
+.timeline {
+  &__container {
+    margin-bottom: 120px;
+  }
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__item {
+    margin-bottom: 42px;
+    &_date {
+      font: 700 36px/36px 'Poppins', sans-serif;
+      margin-bottom: 16px;
+      &:before {
+        background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+        border-radius: 4px;
+        content: '';
+        display: inline-block;
+        height: 36px;
+        margin-right: 16px;
+        vertical-align: bottom;
+        width: 6px;
+      }
+    }
+    &_desc {
+      letter-spacing: .5px;
+      margin-bottom: 8px;
+    }
+    &_percent-wrap {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+    }
+    &_line {
+      background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+      border: 1px solid transparent;
+      border-radius: 32px;
+      height: 16px;
+      position: relative;
+      flex-grow: 1;
+      &:before {
+        background-color: transparent;
+        border-radius: 32px;
+        border: 1px solid #2A2B4A;
+        bottom: 0;
+        content: '';
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        top: 0;
+      }
+    }
+    &_percent {
+      font: 400 24px/1.5 'Bebas Neue', cursive;
+      letter-spacing: 4px;
+      margin-left: 16px;
+    }
   }
 }
 

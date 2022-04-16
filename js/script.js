@@ -49,7 +49,9 @@ $(document).ready(function(){
     if (dictionary.hasOwnProperty(language)) {
       set_lang(dictionary[language]);
     }
-    $("#lang").removeClass('active');
+    $("#lang")
+        .html(language)
+        .removeClass('active');
   });
 
   // Set initial language to English

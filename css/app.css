@@ -398,7 +398,8 @@ main {
   .lang__selected {
     font: 400 24px/1.5 'Poppins', sans-serif;
     position: relative;
-    padding-right: 14px; }
+    padding-right: 14px;
+    text-transform: capitalize; }
     .lang__selected:before {
       bottom: 30%;
       background: no-repeat center/contain url("../img/arrow_icon.svg");
@@ -422,7 +423,8 @@ main {
     transition: all .3s ease; }
   .lang__item {
     font: 400 20px/1.5 'Poppins', sans-serif;
-    opacity: .7; }
+    opacity: .7;
+    text-transform: capitalize; }
 
 .header {
   padding-bottom: 144px;
@@ -469,6 +471,56 @@ main {
   .header__desc {
     font: 700 16px/1.5 'Poppins', sans-serif;
     transition: opacity .3s ease; }
+
+.timeline__container {
+  margin-bottom: 120px; }
+
+.timeline__title {
+  margin-bottom: 36px; }
+
+.timeline__item {
+  margin-bottom: 42px; }
+  .timeline__item_date {
+    font: 700 36px/36px 'Poppins', sans-serif;
+    margin-bottom: 16px; }
+    .timeline__item_date:before {
+      background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+      border-radius: 4px;
+      content: '';
+      display: inline-block;
+      height: 36px;
+      margin-right: 16px;
+      vertical-align: bottom;
+      width: 6px; }
+  .timeline__item_desc {
+    letter-spacing: .5px;
+    margin-bottom: 8px; }
+  .timeline__item_percent-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px; }
+  .timeline__item_line {
+    background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    height: 16px;
+    position: relative;
+    flex-grow: 1; }
+    .timeline__item_line:before {
+      background-color: transparent;
+      border-radius: 32px;
+      border: 1px solid #2A2B4A;
+      bottom: 0;
+      content: '';
+      left: -1px;
+      position: absolute;
+      right: -1px;
+      top: 0; }
+  .timeline__item_percent {
+    font: 400 24px/1.5 'Bebas Neue', cursive;
+    letter-spacing: 4px;
+    margin-left: 16px; }
 
 .soon {
   text-align: center; }
