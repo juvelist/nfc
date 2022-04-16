@@ -6,7 +6,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -375,7 +375,8 @@ main {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1062px; }
+  max-width: 90%;
+  width: 1062px; }
 
 .card {
   backdrop-filter: blur(110px);
@@ -424,7 +425,7 @@ main {
     opacity: .7; }
 
 .header {
-  padding-bottom: 168px;
+  padding-bottom: 144px;
   padding-top: 100px; }
   .header__logo {
     height: 205px;
@@ -440,6 +441,7 @@ main {
     flex-wrap: wrap;
     justify-content: center; }
   .header__item {
+    margin-bottom: 24px;
     margin-left: 24px;
     margin-right: 24px;
     width: 100px; }
@@ -458,7 +460,7 @@ main {
       .header__link:hover + p {
         opacity: .6; }
       .header__link:hover > img {
-        transform: scale(0.95); } }
+        transform: scale(0.9); } }
     .header__link_img {
       height: 70px;
       object-fit: contain;
@@ -490,3 +492,149 @@ main {
       height: 100%;
       object-fit: contain;
       width: 100%; }
+
+.buy__container {
+  margin-bottom: 120px;
+  text-align: center; }
+
+.buy__title-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px; }
+
+.buy__btn {
+  background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  font: 700 22px/60px 'Poppins', sans-serif;
+  height: 62px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative; }
+  @media only screen and (min-width: 1025px) {
+    .buy__btn {
+      transition: opacity .3s ease; }
+      .buy__btn:hover {
+        background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
+        opacity: .8; } }
+  .buy__btn:before {
+    background-color: transparent;
+    border-radius: 32px;
+    border: 3px solid #2A2B4A;
+    bottom: 0;
+    content: '';
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: 0; }
+
+.buy__amount {
+  background: linear-gradient(170deg, #32355e 1.85%, #282b48 99%) padding-box, linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  margin-bottom: 48px;
+  padding: 24px; }
+  .buy__amount_enter {
+    opacity: .6; }
+  .buy__amount_balance {
+    font-weight: 700; }
+  .buy__amount_currency {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 12px;
+    position: relative; }
+    .buy__amount_currency:before {
+      bottom: 36%;
+      background: no-repeat center/contain url("../img/arrow_icon.svg");
+      content: '';
+      height: 6px;
+      position: absolute;
+      right: 0;
+      transition: transform .3s ease;
+      width: 8px; }
+    .buy__amount_currency.active {
+      pointer-events: none; }
+      .buy__amount_currency.active:before {
+        transform: rotate(-180deg); }
+
+.buy__amount-wrap {
+  display: flex;
+  justify-content: space-between; }
+  .buy__amount-wrap:not(:last-child) {
+    margin-bottom: 16px; }
+  .buy__amount-wrap > p,
+  .buy__amount-wrap > div {
+    letter-spacing: .5px; }
+
+.buy__price {
+  margin-bottom: 48px; }
+  .buy__price_desc {
+    font-size: 32px;
+    font-weight: 700; }
+  .buy__price_currency {
+    font-weight: 700; }
+
+.buy__price-wrap {
+  display: flex;
+  justify-content: space-between; }
+  .buy__price-wrap:not(:last-child) {
+    margin-bottom: 16px; }
+  .buy__price-wrap > p,
+  .buy__price-wrap > div {
+    letter-spacing: .5px; }
+
+.buy__btn-buy {
+  background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 20.1%, #7B7FEA 80.3%, #1BB2DE 99.5%) border-box;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  font: 400 24px 'Bebas Neue', cursive;
+  height: 62px;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+  width: 100%; }
+  @media only screen and (min-width: 1025px) {
+    .buy__btn-buy {
+      transition: opacity .3s ease; }
+      .buy__btn-buy:hover {
+        background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
+        opacity: .8; } }
+  .buy__btn-buy:before {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 32px;
+    border: 3px solid #2A2B4A;
+    bottom: 0;
+    content: attr(data-translate);
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: 0; }
+  .buy__btn-buy > span {
+    bottom: 0;
+    display: inline-block;
+    left: 0;
+    line-height: 58px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2; }
+
+.buy__btn-add {
+  background: -webkit-linear-gradient(90deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  font: 400 24px/1.5 'Bebas Neue', cursive;
+  letter-spacing: .5px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media only screen and (min-width: 1025px) {
+    .buy__btn-add:hover {
+      background: -webkit-linear-gradient(-90deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone; } }

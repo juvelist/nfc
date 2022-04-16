@@ -15,7 +15,8 @@ main {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1062px;
+  max-width: 90%;
+  width: 1062px;
   //outline: 1px solid lightskyblue; //
 }
 
@@ -80,7 +81,7 @@ main {
 
 // header
 .header {
-  padding-bottom: 168px;
+  padding-bottom: 144px;
   padding-top: 100px;
   &__logo {
     height: 205px;
@@ -100,6 +101,7 @@ main {
     justify-content: center;
   }
   &__item {
+    margin-bottom: 24px;
     margin-left: 24px;
     margin-right: 24px;
     width: 100px;
@@ -121,7 +123,7 @@ main {
           opacity: .6;
         }
         & > img {
-          transform: scale(.95);
+          transform: scale(.9);
         }
       }
     }
@@ -164,6 +166,175 @@ main {
       height: 100%;
       object-fit: contain;
       width: 100%;
+    }
+  }
+}
+
+// buy
+.buy {
+  &__container {
+    margin-bottom: 120px;
+    text-align: center;
+  }
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__btn {
+    background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    font: 700 22px/60px 'Poppins', sans-serif;
+    height: 62px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+    @media only screen and (min-width: 1025px) {
+      transition: opacity .3s ease;
+      &:hover {
+        background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 37.1%, $gradientColor3 51.3%, $gradientColor4 99.5%) border-box;
+        opacity: .8;
+      }
+    }
+    &:before {
+      background-color: transparent;
+      border-radius: 32px;
+      border: 3px solid #2A2B4A;
+      bottom: 0;
+      content: '';
+      left: -2px;
+      position: absolute;
+      right: -2px;
+      top: 0;
+    }
+  }
+  &__amount {
+    background: linear-gradient(170deg, rgb(50, 53, 94) 1.85%, rgb(40, 43, 72) 99%) padding-box, linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    margin-bottom: 48px;
+    padding: 24px;
+    &_enter {
+      opacity: .6;
+    }
+    &_balance {
+      font-weight: 700;
+    }
+    &_currency {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      padding-right: 12px;
+      position: relative;
+      &:before {
+        bottom: 36%;
+        background: no-repeat center/contain url('../img/arrow_icon.svg');
+        content: '';
+        height: 6px;
+        position: absolute;
+        right: 0;
+        transition: transform .3s ease;
+        width: 8px;
+      }
+      &.active {
+        pointer-events: none;
+        &:before {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  &__amount-wrap {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    & > p,
+    & > div {
+      letter-spacing: .5px;
+    }
+  }
+  &__price {
+    margin-bottom: 48px;
+    &_desc {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    &_currency {
+      font-weight: 700;
+    }
+  }
+  &__price-wrap {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    & > p,
+    & > div {
+      letter-spacing: .5px;
+    }
+  }
+  &__btn-buy {
+    background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 20.1%, $gradientColor3 80.3%, $gradientColor4 99.5%) border-box;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    font: 400 24px 'Bebas Neue', cursive;
+    height: 62px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+    width: 100%;
+    @media only screen and (min-width: 1025px) {
+      transition: opacity .3s ease;
+      &:hover {
+        background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 37.1%, $gradientColor3 51.3%, $gradientColor4 99.5%) border-box;
+        opacity: .8;
+      }
+    }
+    &:before {
+      background-color: rgba(0, 0, 0, .6);
+      border-radius: 32px;
+      border: 3px solid #2A2B4A;
+      bottom: 0;
+      content: attr(data-translate);
+      left: -2px;
+      position: absolute;
+      right: -2px;
+      top: 0;
+    }
+    & > span {
+      bottom: 0;
+      display: inline-block;
+      left: 0;
+      line-height: 58px;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
+  &__btn-add {
+    background: -webkit-linear-gradient(90deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    font: 400 24px/1.5 'Bebas Neue', cursive;
+    letter-spacing: .5px;
+    margin-right: auto;
+    margin-left: auto;
+    @media only screen and (min-width: 1025px) {
+      &:hover {
+        background: -webkit-linear-gradient(-90deg, $gradientColor1 1.7%, $gradientColor2 37.1%, $gradientColor3 51.3%, $gradientColor4 99.5%) border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+      }
     }
   }
 }

@@ -15,10 +15,12 @@ $(document).ready(function(){
     "en": {
       "Getting started": "Getting started",
       "Soon": "Soon",
+      "Buy NFC": "Buy NFC",
     },
     "es": {
       "Getting started": "Empezando",
       "Soon": "Pronto",
+      "Buy NFC": "Comprar NFC",
     }
   };
 
