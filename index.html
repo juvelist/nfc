@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="css/app.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="img/favicon.ico">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
@@ -36,26 +36,81 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
   <title>NFC</title>
+
+  <script src="js/jquery/jquery.min.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-<div class="container">
-
-
-
-  <!--  main-->
-  <main class="main">
-    <!--    header-->
-    <header class="header smooth">
-
-    </header>
+<!--  header-->
+  <header class="header">
+    <div class="header__container container">
+      <img src="img/logo.svg" class="header__logo" alt="main logo" width="222" height="205">
+      <h1 class="header__title h-2" data-translate="Getting started">Getting started</h1>
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
+            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
+          </a>
+          <p class="header__desc">Group 1</p>
+        </li>
+        <li class="header__item">
+          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
+            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
+          </a>
+          <p class="header__desc">Group 1</p>
+        </li>
+        <li class="header__item">
+          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
+            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
+          </a>
+          <p class="header__desc">Group 1</p>
+        </li>
+        <li class="header__item">
+          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
+            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
+          </a>
+          <p class="header__desc">Group 1</p>
+        </li>
+        <li class="header__item">
+          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
+            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
+          </a>
+          <p class="header__desc">Group 1</p>
+        </li>
+        <li class="header__item">
+          <a href="https://twitter.com/twitterdev" class="header__link" target="_blank" rel="nofollow noopener">
+            <img src="img/twitter_logo.svg" class="header__link_img" alt="link image">
+          </a>
+          <p class="header__desc">Group 1</p>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="soon">
+      <section class="soon__container container card">
+        <h2 class="soon__title h-2" data-translate="Soon">Soon</h2>
+        <div class="soon__store">
+          <a href="https://play.google.com/store" class="soon__store_link" target="_blank" rel="nofollow noopener">
+            <img src="img/google_play.svg" class="soon__store_img" alt="Google Play">
+          </a>
+          <a href="https://www.apple.com/app-store/" class="soon__store_link" target="_blank" rel="nofollow noopener">
+            <img src="img/app_store.svg" class="soon__store_img" alt="App Store">
+          </a>
+        </div>
+      </section>
+    </div>
 
   </main>
 
-
-
-</div>
-
+  <div class="lang" >
+    <p class="lang__selected" id="lang">En</p>
+    <ul class="lang__list">
+      <li class="lang__item">En</li>
+      <li class="lang__item">Es</li>
+    </ul>
+  </div>
 
 <script src="js/script.js"></script>
 

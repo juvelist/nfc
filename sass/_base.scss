@@ -16,7 +16,14 @@ html, body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
+
+a:focus {
+  outline: none;
+}
+
+//a:f
 
 input,
 textarea,
