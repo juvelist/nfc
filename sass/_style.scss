@@ -12,6 +12,7 @@ body {
   position: relative;
 }
 main {
+  overflow: hidden;
   padding-bottom: 220px;
   @media only screen and (max-width: 768px) {
     padding-bottom: 120px;
@@ -109,6 +110,7 @@ main {
 
 // header
 .header {
+  overflow: hidden;
   padding-bottom: 144px;
   padding-top: 100px;
   @media only screen and (max-width: 768px) {
@@ -200,221 +202,6 @@ main {
     transition: opacity .3s ease;
     @media only screen and (max-width: 480px) {
       font-size: 12px;
-    }
-  }
-}
-
-// timeline
-.timeline {
-  &__container {
-    margin-bottom: 120px;
-    @media only screen and (max-width: 480px) {
-      margin-bottom: 80px;
-    }
-  }
-  &__title {
-    margin-bottom: 36px;
-  }
-  &__item {
-    margin-bottom: 42px;
-    &_date {
-      font: 700 36px/36px 'Poppins', sans-serif;
-      margin-bottom: 16px;
-      padding-left: 22px;
-      position: relative;
-      @media only screen and (max-width: 1024px) {
-        font-size: 24px;
-      }
-      @media only screen and (max-width: 480px) {
-        font-size: 18px;
-        line-height: 26px;
-        padding-left: 14px;
-      }
-      &:before {
-        background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
-        border-radius: 4px;
-        content: '';
-        display: inline-block;
-        margin-right: 16px;
-        vertical-align: bottom;
-        width: 6px;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        @media only screen and (max-width: 480px) {
-          width: 4px;
-        }
-      }
-    }
-    &_desc {
-      letter-spacing: .5px;
-      margin-bottom: 8px;
-      @media only screen and (max-width: 480px) {
-        font-size: 14px;
-      }
-    }
-    &_percent-wrap {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 28px;
-      @media only screen and (max-width: 480px) {
-        margin-top: 12px;
-      }
-    }
-    &_line {
-      background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
-      border: 1px solid transparent;
-      border-radius: 32px;
-      height: 16px;
-      position: relative;
-      flex-grow: 1;
-      &:before {
-        background-color: transparent;
-        border-radius: 32px;
-        border: 1px solid #2A2B4A;
-        bottom: 0;
-        content: '';
-        left: -1px;
-        position: absolute;
-        right: -1px;
-        top: 0;
-      }
-      @media only screen and (max-width: 480px) {
-        border: none;
-        height: 10px;
-      }
-    }
-    &_percent {
-      font: 400 24px/1.5 'Bebas Neue', cursive;
-      letter-spacing: 4px;
-      margin-left: 16px;
-      @media only screen and (max-width: 480px) {
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-// about
-.about {
-  &__container {
-    margin-bottom: 120px;
-    display: flex;
-    justify-content: space-between;
-    @media only screen and (max-width: 768px) {
-      flex-direction: column;
-    }
-    @media only screen and (max-width: 480px) {
-      margin-bottom: 80px;
-    }
-  }
-  &__wrap,
-  &__img-wrap {
-    flex: 0 0 49%;
-  }
-  &__wrap {
-    @media only screen and (max-width: 768px) {
-      margin-bottom: 40px;
-    }
-  }
-  &__title {
-    margin-bottom: 24px;
-  }
-  &__desc {
-    margin-bottom: 28px;
-    letter-spacing: .5px;
-  }
-  &__payment {
-    display: flex;
-    align-items: center;
-    @media only screen and (max-width: 480px) {
-      justify-content: space-between;
-    }
-  }
-  &__img {
-    height: auto;
-    &:not(:last-child) {
-      margin-right: 60px;
-      @media only screen and (max-width: 480px) {
-        margin-right: 0;
-      }
-    }
-    &_visa {
-      width: 133px;
-      @media only screen and (max-width: 1024px) {
-        width: 90px;
-      }
-    }
-    &_mastercard,
-    &_unionpay {
-      width: 89px;
-      @media only screen and (max-width: 1024px) {
-        width: 60px;
-      }
-    }
-  }
-  &__img-wrap {
-    text-align: center;
-  }
-  &__img-card {
-    height: 427px;
-    transform: translateY(33px);
-    width: 425px;
-    @media only screen and (max-width: 768px) {
-      height: 214px;
-      width: 213px;
-    }
-    @media only screen and (max-width: 480px) {
-      transform: translateY(25px);
-    }
-  }
-}
-
-// soon
-.soon {
-  text-align: center;
-  &__title {
-    margin-bottom: 32px;
-    @media only screen and (max-width: 480px) {
-      margin-bottom: 20px;
-    }
-  }
-  &__store {
-    display: flex;
-    justify-content: center;
-    @media only screen and (max-width: 480px) {
-      align-items: center;
-      flex-direction: column;
-    }
-    &_link {
-      height: 85px;
-      margin-left: 16px;
-      margin-right: 16px;
-      opacity: 1;
-      pointer-events: none;
-      width: 296px;
-      @media only screen and (min-width: 1025px) {
-        transition: opacity .3s ease;
-        &:hover {
-          opacity: .7;
-        }
-      }
-      @media only screen and (max-width: 1024px) {
-        height: 60px;
-        width: 200px;
-      }
-      @media only screen and (max-width: 480px) {
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-      }
-    }
-    &_img {
-      height: 100%;
-      object-fit: contain;
-      width: 100%;
     }
   }
 }
@@ -621,3 +408,404 @@ main {
     }
   }
 }
+
+// timeline
+.timeline {
+  &__container {
+    margin-bottom: 120px;
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 80px;
+    }
+  }
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__item {
+    margin-bottom: 42px;
+    &_date {
+      font: 700 36px/36px 'Poppins', sans-serif;
+      margin-bottom: 16px;
+      padding-left: 22px;
+      position: relative;
+      @media only screen and (max-width: 1024px) {
+        font-size: 24px;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: 18px;
+        line-height: 26px;
+        padding-left: 14px;
+      }
+      &:before {
+        background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+        border-radius: 4px;
+        content: '';
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: bottom;
+        width: 6px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        @media only screen and (max-width: 480px) {
+          width: 4px;
+        }
+      }
+    }
+    &_desc {
+      letter-spacing: .5px;
+      margin-bottom: 8px;
+      @media only screen and (max-width: 480px) {
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+    }
+    &_percent-wrap {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+      @media only screen and (max-width: 480px) {
+        margin-top: 12px;
+      }
+    }
+    &_line {
+      background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+      border: 1px solid transparent;
+      border-radius: 32px;
+      height: 16px;
+      position: relative;
+      flex-grow: 1;
+      &:before {
+        background-color: transparent;
+        border-radius: 32px;
+        border: 1px solid #2A2B4A;
+        bottom: 0;
+        content: '';
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        top: 0;
+      }
+      @media only screen and (max-width: 480px) {
+        border: none;
+        height: 10px;
+      }
+    }
+    &_percent {
+      font: 400 24px/1.5 'Bebas Neue', cursive;
+      letter-spacing: 4px;
+      margin-left: 16px;
+      @media only screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// roadmap
+.roadmap {
+  &__container {
+    margin-bottom: 120px;
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 80px;
+    }
+  }
+  &__wrap {
+    @media only screen and (max-width: 767px) {
+      padding-left: 50px;
+      position: relative;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__part {
+    display: flex;
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+    &_item {
+      flex: 0 0 50%;
+      min-height: 110px;
+    }
+    &_item-wrap {
+      width: 242px;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 32px;
+        transform: translateX(0) !important;
+      }
+      &-1 {
+        transform: translateX(28%);
+        @media only screen and (max-width: 992px) {
+          transform: translateX(10%);
+        }
+      }
+      &-2 {
+        transform: translateX(130%);
+        @media only screen and (max-width: 992px) {
+          transform: translateX(70%);
+        }
+      }
+      &-3 {
+        transform: translateX(10%);
+        @media only screen and (max-width: 992px) {
+          transform: translateX(0);
+        }
+        @media only screen and (max-width: 767px) {
+          margin-left: auto;
+        }
+      }
+      &-4 {
+        transform: translateX(90%);
+        @media only screen and (max-width: 767px) {
+          margin-left: auto;
+        }
+      }
+    }
+    &_title {
+      background: -webkit-linear-gradient(270deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
+      font: 400 24px/1.5 'Bebas Neue', cursive;
+    }
+    &_desc {
+      color: #E2E2E2;
+      font: 400 14px/16px 'Poppins', sans-serif;
+    }
+  }
+  &__line {
+    background: linear-gradient(90deg, $gradientColor3 1%, $gradientColor4 19%, $gradientColor2 19%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
+    border-radius: 4px;
+    height: 4px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    @media only screen and (max-width: 767px) {
+      left: 0;
+      margin: 0;
+      position: absolute;
+      transform: rotate(-90deg) translate(-46%, 15px);
+      transform-origin: left;
+      width: 540px;
+    }
+    &_curve {
+      position: absolute;
+      width: 180px;
+      height: 130px;
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+      &-1 {
+        bottom: 0;
+        left: 2%;
+        @media only screen and (max-width: 992px) {
+          left: -6.3%;
+        }
+      }
+      &-2 {
+        bottom: 0;
+        left: 30%;
+        @media only screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+      &-3 {
+        bottom: 0;
+        transform: scaleX(-1);
+        left: 60%;
+        @media only screen and (max-width: 992px) {
+          left: 60.5%;
+        }
+      }
+      &-4 {
+        bottom: 0;
+        transform: scaleX(-1);
+        left: 93%;
+      }
+      &-5 {
+        top: 0;
+        transform: scaleY(-1);
+        left: -8%;
+      }
+      &-6 {
+        top: 0;
+        transform: scaleY(-1);
+        left: 21%;
+        @media only screen and (max-width: 992px) {
+          left: 13%;
+        }
+      }
+      &-7 {
+        top: 0;
+        transform: scale(-1, -1);
+        left: 51%;
+      }
+      &-8 {
+        top: 0;
+        transform: scale(-1, -1);
+        left: 80%;
+        @media only screen and (max-width: 992px) {
+          left: 80.5%;
+        }
+      }
+    }
+    &_point {
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      @media only screen and (max-width: 767px) {
+        top: 2px;
+      }
+      &-1 {
+        left: 17.7%;
+        @media only screen and (max-width: 767px) {
+          left: 13%;
+        }
+      }
+      &-2 {
+        left: 36.7%;
+        @media only screen and (max-width: 767px) {
+          left: 41%;
+        }
+      }
+      &-3 {
+        left: 59.1%;
+        @media only screen and (max-width: 767px) {
+          left: 68%;
+        }
+      }
+      &-4 {
+        left: 79.1%;
+        @media only screen and (max-width: 767px) {
+          left: 93%;
+        }
+      }
+    }
+  }
+}
+
+// about
+.about {
+  &__container {
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 80px;
+    }
+  }
+  &__wrap,
+  &__img-wrap {
+    flex: 0 0 49%;
+  }
+  &__wrap {
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__desc {
+    margin-bottom: 28px;
+    letter-spacing: .5px;
+  }
+  &__payment {
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 480px) {
+      justify-content: space-between;
+    }
+  }
+  &__img {
+    height: auto;
+    &:not(:last-child) {
+      margin-right: 60px;
+      @media only screen and (max-width: 480px) {
+        margin-right: 0;
+      }
+    }
+    &_visa {
+      width: 133px;
+      @media only screen and (max-width: 1024px) {
+        width: 90px;
+      }
+    }
+    &_mastercard,
+    &_unionpay {
+      width: 89px;
+      @media only screen and (max-width: 1024px) {
+        width: 60px;
+      }
+    }
+  }
+  &__img-wrap {
+    text-align: center;
+  }
+  &__img-card {
+    height: 427px;
+    transform: translateY(33px);
+    width: 425px;
+    @media only screen and (max-width: 768px) {
+      height: 214px;
+      width: 213px;
+    }
+    @media only screen and (max-width: 480px) {
+      transform: translateY(25px);
+    }
+  }
+}
+
+// soon
+.soon {
+  text-align: center;
+  &__title {
+    margin-bottom: 32px;
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__store {
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 480px) {
+      align-items: center;
+      flex-direction: column;
+    }
+    &_link {
+      height: 85px;
+      margin-left: 16px;
+      margin-right: 16px;
+      opacity: 1;
+      pointer-events: none;
+      width: 296px;
+      @media only screen and (min-width: 1025px) {
+        transition: opacity .3s ease;
+        &:hover {
+          opacity: .7;
+        }
+      }
+      @media only screen and (max-width: 1024px) {
+        height: 60px;
+        width: 200px;
+      }
+      @media only screen and (max-width: 480px) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &_img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}
+
