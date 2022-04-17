@@ -369,12 +369,13 @@ body, select, option, button, textarea {
       font-size: 16px; } }
 
 body {
-  background-color: #1F1D2B;
+  background: no-repeat top center/cover url("../img/stars_header.png"), #1F1D2B;
   position: relative; }
 
 main {
+  background: no-repeat bottom center/auto url("../img/stars_roadmap.png");
   overflow: hidden;
-  padding-bottom: 220px; }
+  padding-bottom: 140px; }
   @media only screen and (max-width: 768px) {
     main {
       padding-bottom: 120px; } }
@@ -485,6 +486,7 @@ main {
         height: 150px;
         width: 160px; } }
   .header__container {
+    position: relative;
     text-align: center; }
     @media only screen and (max-width: 1024px) {
       .header__container {
@@ -549,426 +551,509 @@ main {
     @media only screen and (max-width: 480px) {
       .header__desc {
         font-size: 12px; } }
+  .header__planet {
+    object-fit: contain;
+    position: absolute; }
+    .header__planet_blue {
+      animation: scale 5s infinite;
+      height: 188px;
+      right: -130px;
+      top: 0;
+      width: 310px; }
+      @media only screen and (max-width: 480px) {
+        .header__planet_blue {
+          height: 94px;
+          right: -80px;
+          top: 90px;
+          width: 155px; } }
+    .header__planet_purple {
+      animation: scale 5s infinite 2.2s;
+      bottom: -60px;
+      height: 142px;
+      left: -200px;
+      width: 234px; }
 
-.buy__container {
-  margin-bottom: 120px;
-  text-align: center; }
-  @media only screen and (max-width: 480px) {
-    .buy__container {
-      margin-bottom: 80px; } }
-
-.buy__title-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px; }
-  @media only screen and (max-width: 1024px) {
-    .buy__title-wrap {
-      margin-bottom: 32px; } }
-  @media only screen and (max-width: 480px) {
-    .buy__title-wrap {
-      flex-direction: column; } }
-
-@media only screen and (max-width: 480px) {
-  .buy__title {
-    margin-bottom: 20px; } }
-
-.buy__btn {
-  background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
-  border: 1px solid transparent;
-  border-radius: 32px;
-  font: 700 22px/60px 'Poppins', sans-serif;
-  height: 62px;
-  padding-left: 32px;
-  padding-right: 32px;
+.buy {
   position: relative; }
-  @media only screen and (min-width: 1025px) {
-    .buy__btn {
-      transition: opacity .3s ease; }
-      .buy__btn:hover {
-        background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
-        opacity: .8; } }
-  .buy__btn:before {
-    background-color: transparent;
-    border-radius: 32px;
-    border: 3px solid #2A2B4A;
-    bottom: 0;
+  .buy:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
     content: '';
-    left: -2px;
-    position: absolute;
-    right: -2px;
-    top: 0; }
-
-.buy__amount {
-  background: linear-gradient(170deg, #32355e 1.85%, #282b48 99%) padding-box, linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
-  border: 1px solid transparent;
-  border-radius: 32px;
-  margin-bottom: 48px;
-  padding: 24px; }
-  .buy__amount_enter {
-    opacity: .6; }
-  .buy__amount_balance {
-    font-weight: 700; }
-    @media only screen and (max-width: 480px) {
-      .buy__amount_balance {
-        display: inline-flex;
-        justify-content: space-between;
-        align-items: baseline; } }
-  .buy__amount_currency {
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 700;
-    padding-right: 12px;
-    position: relative; }
-    @media only screen and (max-width: 480px) {
-      .buy__amount_currency {
-        display: inline-flex; } }
-    .buy__amount_currency:before {
-      bottom: 36%;
-      background: no-repeat center/contain url("../img/arrow_icon.svg");
-      content: '';
-      height: 6px;
-      position: absolute;
-      right: 0;
-      transition: transform .3s ease;
-      width: 8px; }
-    .buy__amount_currency.active {
-      pointer-events: none; }
-      .buy__amount_currency.active:before {
-        transform: rotate(-180deg); }
-
-.buy__amount-wrap {
-  display: flex;
-  justify-content: space-between; }
-  @media only screen and (max-width: 480px) {
-    .buy__amount-wrap {
-      flex-direction: column; } }
-  .buy__amount-wrap:not(:last-child) {
-    margin-bottom: 16px; }
-  .buy__amount-wrap > p,
-  .buy__amount-wrap > div {
-    letter-spacing: .5px; }
-
-.buy__price {
-  margin-bottom: 48px; }
-  .buy__price_desc {
-    font-size: 32px;
-    font-weight: 700; }
-    @media only screen and (max-width: 1024px) {
-      .buy__price_desc {
-        font-size: 24px; } }
-  .buy__price_currency {
-    font-weight: 700; }
-
-.buy__price-wrap {
-  display: flex;
-  justify-content: space-between; }
-  @media only screen and (max-width: 480px) {
-    .buy__price-wrap {
-      flex-direction: column; } }
-  .buy__price-wrap:not(:last-child) {
-    margin-bottom: 16px; }
-  .buy__price-wrap > p,
-  .buy__price-wrap > div {
-    letter-spacing: .5px; }
-
-.buy__btn-buy {
-  background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 20.1%, #7B7FEA 80.3%, #1BB2DE 99.5%) border-box;
-  border: 1px solid transparent;
-  border-radius: 32px;
-  font: 400 24px 'Bebas Neue', cursive;
-  height: 62px;
-  letter-spacing: 4px;
-  margin-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
-  position: relative;
-  width: 100%; }
-  @media only screen and (min-width: 1025px) {
-    .buy__btn-buy {
-      transition: opacity .3s ease; }
-      .buy__btn-buy:hover {
-        background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
-        opacity: .8; } }
-  @media only screen and (max-width: 1024px) {
-    .buy__btn-buy {
-      font-size: 18px; } }
-  .buy__btn-buy:before {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 32px;
-    border: 3px solid #2A2B4A;
-    bottom: 0;
-    content: attr(data-translate);
-    left: -2px;
-    position: absolute;
-    right: -2px;
-    top: 0; }
-  .buy__btn-buy > span {
-    bottom: 0;
-    display: inline-block;
+    height: 40px;
     left: 0;
-    line-height: 58px;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
     position: absolute;
     right: 0;
-    top: 0;
-    z-index: 2; }
-
-.buy__btn-add {
-  background: -webkit-linear-gradient(90deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  font: 400 24px/1.5 'Bebas Neue', cursive;
-  letter-spacing: .5px;
-  margin-right: auto;
-  margin-left: auto; }
-  @media only screen and (min-width: 1025px) {
-    .buy__btn-add:hover {
-      background: -webkit-linear-gradient(-90deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-box-decoration-break: clone; } }
-
-.timeline__container {
-  margin-bottom: 120px; }
-  @media only screen and (max-width: 480px) {
-    .timeline__container {
-      margin-bottom: 80px; } }
-
-.timeline__title {
-  margin-bottom: 36px; }
-
-.timeline__item {
-  margin-bottom: 42px; }
-  .timeline__item_date {
-    font: 700 36px/36px 'Poppins', sans-serif;
-    margin-bottom: 16px;
-    padding-left: 22px;
-    position: relative; }
-    @media only screen and (max-width: 1024px) {
-      .timeline__item_date {
-        font-size: 24px; } }
+    top: 50%;
+    width: 1300px; }
+  .buy__container {
+    margin-bottom: 120px;
+    position: relative;
+    text-align: center;
+    z-index: 1; }
     @media only screen and (max-width: 480px) {
-      .timeline__item_date {
-        font-size: 18px;
-        line-height: 26px;
-        padding-left: 14px; } }
-    .timeline__item_date:before {
-      background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
-      border-radius: 4px;
-      content: '';
-      display: inline-block;
-      margin-right: 16px;
-      vertical-align: bottom;
-      width: 6px;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      position: absolute; }
-      @media only screen and (max-width: 480px) {
-        .timeline__item_date:before {
-          width: 4px; } }
-  .timeline__item_desc {
-    letter-spacing: .5px;
-    margin-bottom: 8px; }
-    @media only screen and (max-width: 480px) {
-      .timeline__item_desc {
-        font-size: 14px;
-        margin-bottom: 2px; } }
-  .timeline__item_percent-wrap {
-    align-items: center;
+      .buy__container {
+        margin-bottom: 80px; } }
+  .buy__title-wrap {
     display: flex;
     justify-content: space-between;
-    margin-top: 28px; }
+    margin-bottom: 16px; }
+    @media only screen and (max-width: 1024px) {
+      .buy__title-wrap {
+        margin-bottom: 32px; } }
     @media only screen and (max-width: 480px) {
-      .timeline__item_percent-wrap {
-        margin-top: 12px; } }
-  .timeline__item_line {
-    background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+      .buy__title-wrap {
+        flex-direction: column; } }
+  @media only screen and (max-width: 480px) {
+    .buy__title {
+      margin-bottom: 20px; } }
+  .buy__btn {
+    background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
     border: 1px solid transparent;
     border-radius: 32px;
-    height: 16px;
-    position: relative;
-    flex-grow: 1; }
-    .timeline__item_line:before {
+    font: 700 22px/60px 'Poppins', sans-serif;
+    height: 62px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative; }
+    @media only screen and (min-width: 1025px) {
+      .buy__btn {
+        transition: opacity .3s ease; }
+        .buy__btn:hover {
+          background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
+          opacity: .8; } }
+    .buy__btn:before {
       background-color: transparent;
       border-radius: 32px;
-      border: 1px solid #2A2B4A;
+      border: 3px solid #2A2B4A;
       bottom: 0;
       content: '';
-      left: -1px;
+      left: -2px;
       position: absolute;
-      right: -1px;
+      right: -2px;
       top: 0; }
+  .buy__amount {
+    background: linear-gradient(170deg, #32355e 1.85%, #282b48 99%) padding-box, linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    margin-bottom: 48px;
+    padding: 24px; }
+    .buy__amount_enter {
+      opacity: .6; }
+    .buy__amount_balance {
+      font-weight: 700; }
+      @media only screen and (max-width: 480px) {
+        .buy__amount_balance {
+          display: inline-flex;
+          justify-content: space-between;
+          align-items: baseline; } }
+    .buy__amount_currency {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      padding-right: 12px;
+      position: relative; }
+      @media only screen and (max-width: 480px) {
+        .buy__amount_currency {
+          display: inline-flex; } }
+      .buy__amount_currency:before {
+        bottom: 36%;
+        background: no-repeat center/contain url("../img/arrow_icon.svg");
+        content: '';
+        height: 6px;
+        position: absolute;
+        right: 0;
+        transition: transform .3s ease;
+        width: 8px; }
+      .buy__amount_currency.active {
+        pointer-events: none; }
+        .buy__amount_currency.active:before {
+          transform: rotate(-180deg); }
+  .buy__amount-wrap {
+    display: flex;
+    justify-content: space-between; }
     @media only screen and (max-width: 480px) {
-      .timeline__item_line {
-        border: none;
-        height: 10px; } }
-  .timeline__item_percent {
-    font: 400 24px/1.5 'Bebas Neue', cursive;
+      .buy__amount-wrap {
+        flex-direction: column; } }
+    .buy__amount-wrap:not(:last-child) {
+      margin-bottom: 16px; }
+    .buy__amount-wrap > p,
+    .buy__amount-wrap > div {
+      letter-spacing: .5px; }
+  .buy__price {
+    margin-bottom: 48px; }
+    .buy__price_desc {
+      font-size: 32px;
+      font-weight: 700; }
+      @media only screen and (max-width: 1024px) {
+        .buy__price_desc {
+          font-size: 24px; } }
+    .buy__price_currency {
+      font-weight: 700; }
+  .buy__price-wrap {
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 480px) {
+      .buy__price-wrap {
+        flex-direction: column; } }
+    .buy__price-wrap:not(:last-child) {
+      margin-bottom: 16px; }
+    .buy__price-wrap > p,
+    .buy__price-wrap > div {
+      letter-spacing: .5px; }
+  .buy__btn-buy {
+    background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 20.1%, #7B7FEA 80.3%, #1BB2DE 99.5%) border-box;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    font: 400 24px 'Bebas Neue', cursive;
+    height: 62px;
     letter-spacing: 4px;
-    margin-left: 16px; }
-    @media only screen and (max-width: 480px) {
-      .timeline__item_percent {
-        font-size: 16px; } }
-
-.roadmap__container {
-  margin-bottom: 120px; }
-  @media only screen and (max-width: 767px) {
-    .roadmap__container {
-      margin-bottom: 80px; } }
-
-@media only screen and (max-width: 767px) {
-  .roadmap__wrap {
-    padding-left: 50px;
-    position: relative; } }
-
-.roadmap__title {
-  margin-bottom: 24px; }
-
-.roadmap__part {
-  display: flex; }
-  @media only screen and (max-width: 767px) {
-    .roadmap__part {
-      flex-direction: column; } }
-  .roadmap__part_item {
-    flex: 0 0 50%;
-    min-height: 110px; }
-  .roadmap__part_item-wrap {
-    width: 242px; }
-    @media only screen and (max-width: 767px) {
-      .roadmap__part_item-wrap {
-        margin-bottom: 32px;
-        transform: translateX(0) !important;
-        width: 256px; } }
-    .roadmap__part_item-wrap-1 {
-      transform: translateX(28%); }
-      @media only screen and (max-width: 992px) {
-        .roadmap__part_item-wrap-1 {
-          transform: translateX(10%); } }
-    .roadmap__part_item-wrap-2 {
-      transform: translateX(130%); }
-      @media only screen and (max-width: 992px) {
-        .roadmap__part_item-wrap-2 {
-          transform: translateX(70%); } }
-    .roadmap__part_item-wrap-3 {
-      transform: translateX(10%); }
-      @media only screen and (max-width: 992px) {
-        .roadmap__part_item-wrap-3 {
-          transform: translateX(0); } }
-      @media only screen and (max-width: 767px) {
-        .roadmap__part_item-wrap-3 {
-          margin-left: auto; } }
-    .roadmap__part_item-wrap-4 {
-      transform: translateX(90%); }
-      @media only screen and (max-width: 767px) {
-        .roadmap__part_item-wrap-4 {
-          margin-left: auto; } }
-  .roadmap__part_title {
-    background: -webkit-linear-gradient(270deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%);
+    margin-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+    width: 100%; }
+    @media only screen and (min-width: 1025px) {
+      .buy__btn-buy {
+        transition: opacity .3s ease; }
+        .buy__btn-buy:hover {
+          background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
+          opacity: .8; } }
+    @media only screen and (max-width: 1024px) {
+      .buy__btn-buy {
+        font-size: 18px; } }
+    .buy__btn-buy:before {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 32px;
+      border: 3px solid #2A2B4A;
+      bottom: 0;
+      content: attr(data-translate);
+      left: -2px;
+      position: absolute;
+      right: -2px;
+      top: 0; }
+    .buy__btn-buy > span {
+      bottom: 0;
+      display: inline-block;
+      left: 0;
+      line-height: 58px;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2; }
+  .buy__btn-add {
+    background: -webkit-linear-gradient(90deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
-    font: 400 24px/1.5 'Bebas Neue', cursive; }
-  .roadmap__part_desc {
-    color: #E2E2E2;
-    font: 400 14px/16px 'Poppins', sans-serif; }
+    font: 400 24px/1.5 'Bebas Neue', cursive;
+    letter-spacing: .5px;
+    margin-right: auto;
+    margin-left: auto; }
+    @media only screen and (min-width: 1025px) {
+      .buy__btn-add:hover {
+        background: -webkit-linear-gradient(-90deg, #FB37FF 1.7%, #9B6FEE 37.1%, #7B7FEA 51.3%, #1BB2DE 99.5%) border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone; } }
 
-.roadmap__line {
-  background: linear-gradient(90deg, #7B7FEA 1%, #1BB2DE 19%, #9B6FEE 19%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
-  border-radius: 4px;
-  height: 4px;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  position: relative;
-  width: 100%; }
+.timeline {
+  background: no-repeat top center/cover url("../img/stars_timeline.png");
+  position: relative; }
+  .timeline:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1300px; }
+  .timeline__container {
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 1; }
+    @media only screen and (max-width: 480px) {
+      .timeline__container {
+        margin-bottom: 80px; } }
+  .timeline__title {
+    margin-bottom: 36px; }
+  .timeline__item {
+    margin-bottom: 42px; }
+    .timeline__item_date {
+      font: 700 36px/36px 'Poppins', sans-serif;
+      margin-bottom: 16px;
+      padding-left: 22px;
+      position: relative; }
+      @media only screen and (max-width: 1024px) {
+        .timeline__item_date {
+          font-size: 24px; } }
+      @media only screen and (max-width: 480px) {
+        .timeline__item_date {
+          font-size: 18px;
+          line-height: 26px;
+          padding-left: 14px; } }
+      .timeline__item_date:before {
+        background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+        border-radius: 4px;
+        content: '';
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: bottom;
+        width: 6px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute; }
+        @media only screen and (max-width: 480px) {
+          .timeline__item_date:before {
+            width: 4px; } }
+    .timeline__item_desc {
+      letter-spacing: .5px;
+      margin-bottom: 8px; }
+      @media only screen and (max-width: 480px) {
+        .timeline__item_desc {
+          font-size: 14px;
+          margin-bottom: 2px; } }
+    .timeline__item_percent-wrap {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px; }
+      @media only screen and (max-width: 480px) {
+        .timeline__item_percent-wrap {
+          margin-top: 12px; } }
+    .timeline__item_line {
+      background: linear-gradient(180deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+      border: 1px solid transparent;
+      border-radius: 32px;
+      height: 16px;
+      position: relative;
+      flex-grow: 1; }
+      .timeline__item_line:before {
+        background-color: transparent;
+        border-radius: 32px;
+        border: 1px solid #2A2B4A;
+        bottom: 0;
+        content: '';
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        top: 0; }
+      @media only screen and (max-width: 480px) {
+        .timeline__item_line {
+          border: none;
+          height: 10px; } }
+    .timeline__item_percent {
+      font: 400 24px/1.5 'Bebas Neue', cursive;
+      letter-spacing: 4px;
+      margin-left: 16px; }
+      @media only screen and (max-width: 480px) {
+        .timeline__item_percent {
+          font-size: 16px; } }
+  .timeline__planet {
+    animation: scale 4.2s infinite 1s;
+    height: 142px;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 234px; }
+
+.roadmap {
+  position: relative; }
+  .roadmap:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 90%;
+    width: 1300px; }
+  .roadmap__container {
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 1; }
+    @media only screen and (max-width: 767px) {
+      .roadmap__container {
+        margin-bottom: 80px; } }
   @media only screen and (max-width: 767px) {
-    .roadmap__line {
-      left: 0;
-      margin: 0;
+    .roadmap__wrap {
+      padding-left: 50px;
+      position: relative; } }
+  .roadmap__title {
+    margin-bottom: 24px; }
+  .roadmap__part {
+    display: flex; }
+    @media only screen and (max-width: 767px) {
+      .roadmap__part {
+        flex-direction: column; } }
+    .roadmap__part_item {
+      flex: 0 0 50%;
+      min-height: 110px; }
+    .roadmap__part_item-wrap {
+      width: 242px; }
+      @media only screen and (max-width: 767px) {
+        .roadmap__part_item-wrap {
+          margin-bottom: 32px;
+          transform: translateX(0) !important;
+          width: 256px; } }
+      .roadmap__part_item-wrap-1 {
+        transform: translateX(28%); }
+        @media only screen and (max-width: 992px) {
+          .roadmap__part_item-wrap-1 {
+            transform: translateX(10%); } }
+      .roadmap__part_item-wrap-2 {
+        transform: translateX(130%); }
+        @media only screen and (max-width: 992px) {
+          .roadmap__part_item-wrap-2 {
+            transform: translateX(70%); } }
+      .roadmap__part_item-wrap-3 {
+        transform: translateX(10%); }
+        @media only screen and (max-width: 992px) {
+          .roadmap__part_item-wrap-3 {
+            transform: translateX(0); } }
+        @media only screen and (max-width: 767px) {
+          .roadmap__part_item-wrap-3 {
+            margin-left: auto; } }
+      .roadmap__part_item-wrap-4 {
+        transform: translateX(90%); }
+        @media only screen and (max-width: 767px) {
+          .roadmap__part_item-wrap-4 {
+            margin-left: auto; } }
+    .roadmap__part_title {
+      background: -webkit-linear-gradient(270deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
+      font: 400 24px/1.5 'Bebas Neue', cursive; }
+    .roadmap__part_desc {
+      color: #E2E2E2;
+      font: 400 14px/16px 'Poppins', sans-serif; }
+  .roadmap__line {
+    background: linear-gradient(90deg, #7B7FEA 1%, #1BB2DE 19%, #9B6FEE 19%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
+    border-radius: 4px;
+    height: 4px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%; }
+    @media only screen and (max-width: 767px) {
+      .roadmap__line {
+        left: 0;
+        margin: 0;
+        position: absolute;
+        transform: rotate(-90deg) translate(-46%, 15px);
+        transform-origin: left;
+        width: 540px; } }
+    .roadmap__line_curve {
       position: absolute;
-      transform: rotate(-90deg) translate(-46%, 15px);
-      transform-origin: left;
-      width: 540px; } }
-  .roadmap__line_curve {
-    position: absolute;
-    width: 180px;
-    height: 130px; }
-    @media only screen and (max-width: 767px) {
-      .roadmap__line_curve {
-        display: none; } }
-    .roadmap__line_curve-1 {
-      bottom: 0;
-      left: 2%; }
-      @media only screen and (max-width: 992px) {
-        .roadmap__line_curve-1 {
-          left: -6.3%; } }
-    .roadmap__line_curve-2 {
-      bottom: 0;
-      left: 30%; }
-      @media only screen and (max-width: 992px) {
-        .roadmap__line_curve-2 {
+      width: 180px;
+      height: 130px; }
+      @media only screen and (max-width: 767px) {
+        .roadmap__line_curve {
           display: none; } }
-    .roadmap__line_curve-3 {
-      bottom: 0;
-      transform: scaleX(-1);
-      left: 60%; }
-      @media only screen and (max-width: 992px) {
-        .roadmap__line_curve-3 {
-          left: 60.5%; } }
-    .roadmap__line_curve-4 {
-      bottom: 0;
-      transform: scaleX(-1);
-      left: 93%; }
-    .roadmap__line_curve-5 {
+      .roadmap__line_curve-1 {
+        bottom: 0;
+        left: 2%; }
+        @media only screen and (max-width: 992px) {
+          .roadmap__line_curve-1 {
+            left: -6.3%; } }
+      .roadmap__line_curve-2 {
+        bottom: 0;
+        left: 30%; }
+        @media only screen and (max-width: 992px) {
+          .roadmap__line_curve-2 {
+            display: none; } }
+      .roadmap__line_curve-3 {
+        bottom: 0;
+        transform: scaleX(-1);
+        left: 60%; }
+        @media only screen and (max-width: 992px) {
+          .roadmap__line_curve-3 {
+            left: 60.5%; } }
+      .roadmap__line_curve-4 {
+        bottom: 0;
+        transform: scaleX(-1);
+        left: 93%; }
+      .roadmap__line_curve-5 {
+        top: 0;
+        transform: scaleY(-1);
+        left: -8%; }
+      .roadmap__line_curve-6 {
+        top: 0;
+        transform: scaleY(-1);
+        left: 21%; }
+        @media only screen and (max-width: 992px) {
+          .roadmap__line_curve-6 {
+            left: 13%; } }
+      .roadmap__line_curve-7 {
+        top: 0;
+        transform: scale(-1, -1);
+        left: 51%; }
+      .roadmap__line_curve-8 {
+        top: 0;
+        transform: scale(-1, -1);
+        left: 80%; }
+        @media only screen and (max-width: 992px) {
+          .roadmap__line_curve-8 {
+            left: 80.5%; } }
+    .roadmap__line_point {
+      position: absolute;
       top: 0;
-      transform: scaleY(-1);
-      left: -8%; }
-    .roadmap__line_curve-6 {
-      top: 0;
-      transform: scaleY(-1);
-      left: 21%; }
-      @media only screen and (max-width: 992px) {
-        .roadmap__line_curve-6 {
-          left: 13%; } }
-    .roadmap__line_curve-7 {
-      top: 0;
-      transform: scale(-1, -1);
-      left: 51%; }
-    .roadmap__line_curve-8 {
-      top: 0;
-      transform: scale(-1, -1);
-      left: 80%; }
-      @media only screen and (max-width: 992px) {
-        .roadmap__line_curve-8 {
-          left: 80.5%; } }
-  .roadmap__line_point {
+      transform: translateY(-50%); }
+      @media only screen and (max-width: 767px) {
+        .roadmap__line_point {
+          top: 2px; } }
+      .roadmap__line_point-1 {
+        left: 17.7%; }
+        @media only screen and (max-width: 767px) {
+          .roadmap__line_point-1 {
+            left: 13%; } }
+      .roadmap__line_point-2 {
+        left: 36.7%; }
+        @media only screen and (max-width: 767px) {
+          .roadmap__line_point-2 {
+            left: 41%; } }
+      .roadmap__line_point-3 {
+        left: 59.1%; }
+        @media only screen and (max-width: 767px) {
+          .roadmap__line_point-3 {
+            left: 68%; } }
+      .roadmap__line_point-4 {
+        left: 79.1%; }
+        @media only screen and (max-width: 767px) {
+          .roadmap__line_point-4 {
+            left: 93%; } }
+  .roadmap__planet {
+    animation: scale 5s infinite 2.2s;
+    bottom: -60px;
+    height: 142px;
+    left: -90px;
+    object-fit: contain;
     position: absolute;
-    top: 0;
-    transform: translateY(-50%); }
-    @media only screen and (max-width: 767px) {
-      .roadmap__line_point {
-        top: 2px; } }
-    .roadmap__line_point-1 {
-      left: 17.7%; }
-      @media only screen and (max-width: 767px) {
-        .roadmap__line_point-1 {
-          left: 13%; } }
-    .roadmap__line_point-2 {
-      left: 36.7%; }
-      @media only screen and (max-width: 767px) {
-        .roadmap__line_point-2 {
-          left: 41%; } }
-    .roadmap__line_point-3 {
-      left: 59.1%; }
-      @media only screen and (max-width: 767px) {
-        .roadmap__line_point-3 {
-          left: 68%; } }
-    .roadmap__line_point-4 {
-      left: 79.1%; }
-      @media only screen and (max-width: 767px) {
-        .roadmap__line_point-4 {
-          left: 93%; } }
+    width: 234px; }
+    @media only screen and (max-width: 480px) {
+      .roadmap__planet {
+        bottom: -60px;
+        height: 71px;
+        left: 230px;
+        width: 117px; } }
 
 .about__container {
   margin-bottom: 120px;
@@ -1036,7 +1121,25 @@ main {
       transform: translateY(25px); } }
 
 .soon {
+  position: relative;
   text-align: center; }
+  .soon:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1300px; }
+  .soon__container {
+    position: relative;
+    z-index: 1; }
   .soon__title {
     margin-bottom: 32px; }
     @media only screen and (max-width: 480px) {
@@ -1072,3 +1175,22 @@ main {
       height: 100%;
       object-fit: contain;
       width: 100%; }
+  .soon__planet {
+    animation: scale 5s infinite;
+    bottom: -140px;
+    height: 188px;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    width: 310px; }
+    @media only screen and (max-width: 480px) {
+      .soon__planet {
+        bottom: -90px;
+        height: 94px;
+        width: 155px; } }
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.06); } }

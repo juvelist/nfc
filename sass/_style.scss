@@ -8,12 +8,13 @@ body, select, option, button, textarea {
 }
 
 body {
-  background-color: $backDark;
+  background: no-repeat top center/cover url('../img/stars_header.png'), $backDark;
   position: relative;
 }
 main {
+  background: no-repeat bottom center/auto url('../img/stars_roadmap.png');
   overflow: hidden;
-  padding-bottom: 220px;
+  padding-bottom: 140px;
   @media only screen and (max-width: 768px) {
     padding-bottom: 120px;
   }
@@ -141,6 +142,7 @@ main {
     }
   }
   &__container {
+    position: relative;
     text-align: center;
     @media only screen and (max-width: 1024px) {
       width: 600px;
@@ -217,13 +219,55 @@ main {
       font-size: 12px;
     }
   }
+  &__planet {
+    object-fit: contain;
+    position: absolute;
+    &_blue {
+      animation: scale 5s infinite;
+      height: 188px;
+      right: -130px;
+      top: 0;
+      width: 310px;
+      @media only screen and (max-width: 480px) {
+        height: 94px;
+        right: -80px;
+        top: 90px;
+        width: 155px;
+      }
+    }
+    &_purple {
+      animation: scale 5s infinite 2.2s;
+      bottom: -60px;
+      height: 142px;
+      left: -200px;
+      width: 234px;
+    }
+  }
 }
 
 // buy
 .buy {
+  position: relative;
+  &:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1300px;
+  }
   &__container {
     margin-bottom: 120px;
+    position: relative;
     text-align: center;
+    z-index: 1;
     @media only screen and (max-width: 480px) {
       margin-bottom: 80px;
     }
@@ -424,8 +468,27 @@ main {
 
 // timeline
 .timeline {
+  background: no-repeat top center/cover url('../img/stars_timeline.png');
+  position: relative;
+  &:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1300px;
+  }
   &__container {
     margin-bottom: 120px;
+    position: relative;
+    z-index: 1;
     @media only screen and (max-width: 480px) {
       margin-bottom: 80px;
     }
@@ -514,12 +577,39 @@ main {
       }
     }
   }
+  &__planet {
+    animation: scale 4.2s infinite 1s;
+    height: 142px;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 234px;
+  }
 }
 
 // roadmap
 .roadmap {
+  position: relative;
+  &:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 90%;
+    width: 1300px;
+  }
   &__container {
     margin-bottom: 120px;
+    position: relative;
+    z-index: 1;
     @media only screen and (max-width: 767px) {
       margin-bottom: 80px;
     }
@@ -699,6 +789,21 @@ main {
       }
     }
   }
+  &__planet {
+    animation: scale 5s infinite 2.2s;
+    bottom: -60px;
+    height: 142px;
+    left: -90px;
+    object-fit: contain;
+    position: absolute;
+    width: 234px;
+    @media only screen and (max-width: 480px) {
+      bottom: -60px;
+      height: 71px;
+      left: 230px;
+      width: 117px;
+    }
+  }
 }
 
 // about
@@ -778,7 +883,27 @@ main {
 
 // soon
 .soon {
+  position: relative;
   text-align: center;
+  &:before {
+    background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
+    filter: blur(120px);
+    border-radius: 10px;
+    content: '';
+    height: 40px;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1300px;
+  }
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
   &__title {
     margin-bottom: 32px;
     @media only screen and (max-width: 480px) {
@@ -821,5 +946,27 @@ main {
       width: 100%;
     }
   }
+  &__planet {
+    animation: scale 5s infinite;
+    bottom: -140px;
+    height: 188px;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    width: 310px;
+    @media only screen and (max-width: 480px) {
+      bottom: -90px;
+      height: 94px;
+      width: 155px;
+    }
+  }
 }
 
+@keyframes scale {
+  0%, 100%  {
+    transform: scale(1);
+  }
+  50%  {
+    transform: scale(1.06);
+  }
+}

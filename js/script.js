@@ -1,3 +1,5 @@
+// AOS animation
+AOS.init();
 
 // lang
 $(document).ready(function(){
