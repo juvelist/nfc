@@ -2,6 +2,9 @@
 body, select, option, button, textarea {
   color: $textWhite;
   font: 400 24px/1.5 'Poppins', sans-serif;
+  @media only screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 body {
@@ -10,6 +13,9 @@ body {
 }
 main {
   padding-bottom: 220px;
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 120px;
+  }
 }
 
 .container {
@@ -27,25 +33,43 @@ main {
   //background: linear-gradient(170deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 99%) padding-box, linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
   background: linear-gradient(177deg, rgb(43, 46, 78) 1%, rgb(41, 40, 71) 99%) padding-box, linear-gradient(177deg, $gradientColor1 1%, #211c2a 30%, #211c2a 70%, $gradientColor4 99%) border-box;
   border: 1px solid transparent;
+  @media only screen and (max-width: 480px) {
+    border-radius: 24px;
+    padding: 24px;
+  }
 }
 
 .h-2 {
   font: 400 56px/1.3 'Bebas Neue', cursive;
   letter-spacing: 4px;
   text-transform: uppercase;
+  @media only screen and (max-width: 1024px) {
+    font-size: 32px;
+  }
 }
 
 // lang
 .lang {
   cursor: pointer;
   position: absolute;
-  top: 80px;
   right: 80px;
+  top: 80px;
+  @media only screen and (max-width: 768px) {
+    right: 40px;
+    top: 40px;
+  }
+  @media only screen and (max-width: 480px) {
+    right: 24px;
+    top: 24px;
+  }
   &__selected {
     font: 400 24px/1.5 'Poppins', sans-serif;
     position: relative;
     padding-right: 14px;
     text-transform: capitalize;
+    @media only screen and (max-width: 480px) {
+      font-size: 16px;
+    }
     &:before {
       bottom: 30%;
       background: no-repeat center/contain url('../img/arrow_icon.svg');
@@ -77,6 +101,9 @@ main {
     font: 400 20px/1.5 'Poppins', sans-serif;
     opacity: .7;
     text-transform: capitalize;
+    @media only screen and (max-width: 480px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -84,14 +111,25 @@ main {
 .header {
   padding-bottom: 144px;
   padding-top: 100px;
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 80px;
+    padding-top: 60px;
+  }
   &__logo {
     height: 205px;
     margin-bottom: 32px;
     object-fit: contain;
     width: 222px;
+    @media only screen and (max-width: 1024px) {
+      height: 150px;
+      width: 160px;
+    }
   }
   &__container {
     text-align: center;
+    @media only screen and (max-width: 1024px) {
+      width: 600px;
+    }
   }
   &__title {
     margin-bottom: 60px;
@@ -100,12 +138,23 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @media only screen and (max-width: 480px) {
+      justify-content: space-evenly;
+    }
   }
   &__item {
     margin-bottom: 24px;
     margin-left: 24px;
     margin-right: 24px;
     width: 100px;
+    @media only screen and (max-width: 1024px) {
+      width: 80px;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-left: 16px;
+      margin-right: 16px;
+      width: 60px;
+    }
   }
   &__link {
     align-items: center;
@@ -117,7 +166,7 @@ main {
     height: 100px;
     justify-content: center;
     margin-bottom: 16px;
-    width: 100px;
+    width: 100%;
     @media only screen and (min-width: 1025px) {
       &:hover {
         & + p {
@@ -128,16 +177,30 @@ main {
         }
       }
     }
+    @media only screen and (max-width: 1024px) {
+      height: 80px;
+    }
+    @media only screen and (max-width: 480px) {
+      border-radius: 16px;
+      height: 60px;
+    }
     &_img {
       height: 70px;
       object-fit: contain;
       transition: transform .3s ease;
       width: 70px;
+      @media only screen and (max-width: 1024px) {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
   &__desc {
     font: 700 16px/1.5 'Poppins', sans-serif;
     transition: opacity .3s ease;
+    @media only screen and (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -145,6 +208,9 @@ main {
 .timeline {
   &__container {
     margin-bottom: 120px;
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 80px;
+    }
   }
   &__title {
     margin-bottom: 36px;
@@ -154,26 +220,48 @@ main {
     &_date {
       font: 700 36px/36px 'Poppins', sans-serif;
       margin-bottom: 16px;
+      padding-left: 22px;
+      position: relative;
+      @media only screen and (max-width: 1024px) {
+        font-size: 24px;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: 18px;
+        line-height: 26px;
+        padding-left: 14px;
+      }
       &:before {
         background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
         border-radius: 4px;
         content: '';
         display: inline-block;
-        height: 36px;
         margin-right: 16px;
         vertical-align: bottom;
         width: 6px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        @media only screen and (max-width: 480px) {
+          width: 4px;
+        }
       }
     }
     &_desc {
       letter-spacing: .5px;
       margin-bottom: 8px;
+      @media only screen and (max-width: 480px) {
+        font-size: 14px;
+      }
     }
     &_percent-wrap {
       align-items: center;
       display: flex;
       justify-content: space-between;
       margin-top: 28px;
+      @media only screen and (max-width: 480px) {
+        margin-top: 12px;
+      }
     }
     &_line {
       background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
@@ -193,11 +281,18 @@ main {
         right: -1px;
         top: 0;
       }
+      @media only screen and (max-width: 480px) {
+        border: none;
+        height: 10px;
+      }
     }
     &_percent {
       font: 400 24px/1.5 'Bebas Neue', cursive;
       letter-spacing: 4px;
       margin-left: 16px;
+      @media only screen and (max-width: 480px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -208,10 +303,21 @@ main {
     margin-bottom: 120px;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 80px;
+    }
   }
   &__wrap,
   &__img-wrap {
     flex: 0 0 49%;
+  }
+  &__wrap {
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 40px;
+    }
   }
   &__title {
     margin-bottom: 24px;
@@ -223,20 +329,30 @@ main {
   &__payment {
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 480px) {
+      justify-content: space-between;
+    }
   }
   &__img {
     height: auto;
     &:not(:last-child) {
       margin-right: 60px;
+      @media only screen and (max-width: 480px) {
+        margin-right: 0;
+      }
     }
     &_visa {
       width: 133px;
+      @media only screen and (max-width: 1024px) {
+        width: 90px;
+      }
     }
-    &_mastercard {
-      width: 89px;
-    }
+    &_mastercard,
     &_unionpay {
       width: 89px;
+      @media only screen and (max-width: 1024px) {
+        width: 60px;
+      }
     }
   }
   &__img-wrap {
@@ -246,6 +362,13 @@ main {
     height: 427px;
     transform: translateY(33px);
     width: 425px;
+    @media only screen and (max-width: 768px) {
+      height: 214px;
+      width: 213px;
+    }
+    @media only screen and (max-width: 480px) {
+      transform: translateY(25px);
+    }
   }
 }
 
@@ -254,20 +377,37 @@ main {
   text-align: center;
   &__title {
     margin-bottom: 32px;
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
   }
   &__store {
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 480px) {
+      align-items: center;
+      flex-direction: column;
+    }
     &_link {
+      height: 85px;
       margin-left: 16px;
       margin-right: 16px;
       opacity: 1;
+      pointer-events: none;
       width: 296px;
-      height: 85px;
       @media only screen and (min-width: 1025px) {
         transition: opacity .3s ease;
         &:hover {
           opacity: .7;
+        }
+      }
+      @media only screen and (max-width: 1024px) {
+        height: 60px;
+        width: 200px;
+      }
+      @media only screen and (max-width: 480px) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
         }
       }
     }
@@ -284,11 +424,25 @@ main {
   &__container {
     margin-bottom: 120px;
     text-align: center;
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 80px;
+    }
   }
   &__title-wrap {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 32px;
+    }
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
   }
   &__btn {
     background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
@@ -329,6 +483,11 @@ main {
     }
     &_balance {
       font-weight: 700;
+      @media only screen and (max-width: 480px) {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
     }
     &_currency {
       cursor: pointer;
@@ -336,6 +495,9 @@ main {
       font-weight: 700;
       padding-right: 12px;
       position: relative;
+      @media only screen and (max-width: 480px) {
+        display: inline-flex;
+      }
       &:before {
         bottom: 36%;
         background: no-repeat center/contain url('../img/arrow_icon.svg');
@@ -357,6 +519,9 @@ main {
   &__amount-wrap {
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     &:not(:last-child) {
       margin-bottom: 16px;
     }
@@ -370,6 +535,9 @@ main {
     &_desc {
       font-size: 32px;
       font-weight: 700;
+      @media only screen and (max-width: 1024px) {
+        font-size: 24px;
+      }
     }
     &_currency {
       font-weight: 700;
@@ -378,6 +546,9 @@ main {
   &__price-wrap {
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     &:not(:last-child) {
       margin-bottom: 16px;
     }
@@ -404,6 +575,9 @@ main {
         background: linear-gradient(180deg, $gradientColor1 1.7%, $gradientColor2 37.1%, $gradientColor3 51.3%, $gradientColor4 99.5%) border-box;
         opacity: .8;
       }
+    }
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
     }
     &:before {
       background-color: rgba(0, 0, 0, .6);
