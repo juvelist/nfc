@@ -31,11 +31,9 @@ main {
 }
 
 .card {
-  //background: linear-gradient(170deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 99%);
   backdrop-filter: blur(110px);
   border-radius: 32px;
   padding: 32px;
-  //background: linear-gradient(170deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 99%) padding-box, linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
   background: linear-gradient(177deg, rgb(43, 46, 78) 1%, rgb(41, 40, 71) 99%) padding-box, linear-gradient(177deg, $gradientColor1 1%, #211c2a 30%, #211c2a 70%, $gradientColor4 99%) border-box;
   border: 1px solid transparent;
   @media only screen and (max-width: 480px) {
@@ -962,11 +960,76 @@ main {
   }
 }
 
+// stars
+.stars {
+  background: transparent;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  transform: rotateZ(-20deg);
+  top: 0;
+  z-index: -1;
+  &__item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+    animation:
+    tail $shooting-time ease-in-out infinite,
+    shooting $shooting-time ease-in-out infinite;
+    &:nth-child(odd) {
+      background: linear-gradient(-45deg, rgba(252, 73, 239, 1), rgba(0, 0, 255, 0));
+    }
+    &:nth-child(even) {
+      background: linear-gradient(-45deg, rgba(38, 255, 239, 1), rgba(0, 0, 255, 0));
+    }
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        $delay: random(9999) + 0ms;
+        top: calc(50% - #{random(400) - 200px});
+        left: calc(50% - #{random(300) + 0px});
+        animation-delay: $delay;
+        opacity: random(50) / 100 + 0.5;
+        &::before,
+        &::after {
+          animation-delay: $delay;
+        }
+      }
+    }
+  }
+}
+
+
+
+// keyframes
 @keyframes scale {
   0%, 100%  {
     transform: scale(1);
   }
   50%  {
-    transform: scale(1.06);
+    transform: scale(1.08);
+  }
+}
+
+@keyframes tail {
+  0%, 100% {
+    width: 0;
+  }
+
+  30% {
+    width: 100px;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
   }
 }
