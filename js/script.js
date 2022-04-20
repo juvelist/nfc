@@ -1,13 +1,13 @@
 // AOS animation
-AOS.init();
+AOS.init({
+  offset: 40
+});
 
 function copyContractNo() {
   var copyText = document.getElementById("contractNo");
-
   copyText.select();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
   navigator.clipboard.writeText(copyText.value);
-  console.log("Copied the text: " + copyText.value);
 
   var tooltip = document.getElementById("copyTooltip");
   tooltip.innerHTML = "Copied";
@@ -24,7 +24,6 @@ $(document).ready(function(){
       .click(copyContractNo)
       .mouseout(copyTooltip)
 
-
   // lang
   var dictionary, set_lang, en, es;
 
@@ -39,13 +38,13 @@ $(document).ready(function(){
   dictionary = {
     "en": {
       "Getting started": "Getting started",
-      "Soon": "Soon",
+      "Coming Soon": "Coming Soon",
       "Buy NFC": "Buy NFC",
     },
-    "es": {
-      "Getting started": "Empezando",
-      "Soon": "Pronto",
-      "Buy NFC": "Comprar NFC",
+    "ru": {
+      "Getting started": "Начало работы",
+      "Coming Soon": "Вскоре",
+      "Buy NFC": "Купить NFC",
     }
   };
 

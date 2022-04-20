@@ -1,7 +1,7 @@
 // global styles
 body, select, option, button, textarea, input {
   color: $textWhite;
-  font: 400 24px/1.5 'Poppins', sans-serif;
+  font: 400 24px/1.5 'Poppins Regular', sans-serif;
   user-select: none;
   @media only screen and (max-width: 1024px) {
     font-size: 16px;
@@ -9,18 +9,18 @@ body, select, option, button, textarea, input {
 }
 
 body {
-  background: no-repeat top center/cover url('../img/stars_header.png'), $backDark;
+  background: no-repeat top center/cover url('../img/stars_header.png'), $backDark; // #16122c
   position: relative;
 }
 main {
   background: no-repeat bottom center/auto url('../img/stars_roadmap.png');
   overflow: hidden;
-  padding-bottom: 140px;
+  padding-bottom: 200px;
   @media only screen and (max-width: 768px) {
-    padding-bottom: 120px;
+    padding-bottom: 160px;
   }
   @media only screen and (max-width: 480px) {
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 }
 
@@ -60,7 +60,7 @@ main {
   cursor: pointer;
   position: absolute;
   right: 80px;
-  top: 80px;
+  top: 60px;
   @media only screen and (max-width: 768px) {
     right: 40px;
     top: 40px;
@@ -70,7 +70,7 @@ main {
     top: 24px;
   }
   &__selected {
-    font: 400 24px/1.5 'Poppins', sans-serif;
+    font: 400 24px/1.5 'Poppins Regular', sans-serif;
     height: 40px;
     position: relative;
     padding-right: 14px;
@@ -112,7 +112,7 @@ main {
     transition: all .3s ease;
   }
   &__item {
-    font: 400 20px/1.5 'Poppins', sans-serif;
+    font: 400 20px/1.5 'Poppins Regular', sans-serif;
     opacity: .7;
     text-transform: capitalize;
     @media only screen and (max-width: 480px) {
@@ -284,7 +284,7 @@ main {
     }
   }
   &__desc {
-    font: 700 16px/1.5 'Poppins', sans-serif;
+    font: 700 16px/1.5 'Poppins Bold', sans-serif;
     transition: opacity .3s ease;
     @media only screen and (max-width: 480px) {
       font-size: 12px;
@@ -294,6 +294,7 @@ main {
     object-fit: contain;
     position: absolute;
     &_blue {
+      will-change: transform;
       animation: scale 5s infinite;
       height: 188px;
       right: -130px;
@@ -307,6 +308,7 @@ main {
       }
     }
     &_purple {
+      will-change: transform;
       animation: scale 5s infinite 2.2s;
       bottom: -60px;
       height: 142px;
@@ -363,7 +365,7 @@ main {
     background: linear-gradient(169deg, $gradientColor1 1.7%, $gradientColor2 27.1%, $gradientColor3 61.3%, $gradientColor4 99.5%) border-box;
     border: 1px solid transparent;
     border-radius: 32px;
-    font: 700 22px/60px 'Poppins', sans-serif;
+    font: 700 22px/60px 'Poppins Bold', sans-serif;
     height: 62px;
     padding-left: 32px;
     padding-right: 32px;
@@ -570,7 +572,7 @@ main {
   &__item {
     margin-bottom: 42px;
     &_date {
-      font: 700 36px/36px 'Poppins', sans-serif;
+      font: 700 36px/36px 'Poppins Bold', sans-serif;
       margin-bottom: 16px;
       padding-left: 22px;
       position: relative;
@@ -649,6 +651,7 @@ main {
     }
   }
   &__planet {
+    will-change: transform;
     animation: scale 4.2s infinite 1s;
     height: 142px;
     object-fit: contain;
@@ -678,9 +681,12 @@ main {
     width: 1300px;
   }
   &__container {
-    margin-bottom: 120px;
+    margin-bottom: 160px;
     position: relative;
     z-index: 1;
+    .stars {
+      top: 160px;
+    }
     @media only screen and (max-width: 767px) {
       margin-bottom: 80px;
     }
@@ -704,11 +710,20 @@ main {
       min-height: 110px;
     }
     &_item-wrap {
-      width: 242px;
+      width: 280px;
       @media only screen and (max-width: 767px) {
         margin-bottom: 32px;
         transform: translateX(0) !important;
         width: 256px;
+      }
+      &.sm {
+        display: none;
+        @media only screen and (max-width: 767px) {
+          display: block;
+          & + .roadmap__part_item-wrap {
+            display: none;
+          }
+        }
       }
       &-1 {
         transform: translateX(28%);
@@ -717,9 +732,15 @@ main {
         }
       }
       &-2 {
-        transform: translateX(130%);
+        transform: translateX(105%);
+        @media only screen and (max-width: 1024px) {
+          transform: translateX(55%);
+        }
         @media only screen and (max-width: 992px) {
           transform: translateX(70%);
+        }
+        @media only screen and (max-width: 767px) {
+          margin-left: 40px;
         }
       }
       &-3 {
@@ -727,14 +748,14 @@ main {
         @media only screen and (max-width: 992px) {
           transform: translateX(0);
         }
-        @media only screen and (max-width: 767px) {
-          margin-left: auto;
-        }
       }
       &-4 {
-        transform: translateX(90%);
+        transform: translateX(75%);
+        @media only screen and (max-width: 1024px) {
+          transform: translateX(35%);
+        }
         @media only screen and (max-width: 767px) {
-          margin-left: auto;
+          margin-left: 40px;
         }
       }
     }
@@ -747,7 +768,7 @@ main {
     }
     &_desc {
       color: #E2E2E2;
-      font: 400 14px/16px 'Poppins', sans-serif;
+      font: 400 14px/16px 'Poppins Regular', sans-serif;
     }
   }
   &__line {
@@ -861,6 +882,7 @@ main {
     }
   }
   &__planet {
+    will-change: transform;
     animation: scale 5s infinite 2.2s;
     bottom: -60px;
     height: 142px;
@@ -880,10 +902,11 @@ main {
 // about
 .about {
   &__container {
-    margin-bottom: 120px;
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    @media only screen and (max-width: 768px) {
+    margin-bottom: 120px;
+    @media only screen and (max-width: 1024px) {
       flex-direction: column;
     }
     @media only screen and (max-width: 480px) {
@@ -895,7 +918,7 @@ main {
     flex: 0 0 49%;
   }
   &__wrap {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
       margin-bottom: 40px;
     }
   }
@@ -937,6 +960,7 @@ main {
   }
   &__img-wrap {
     text-align: center;
+    width: 100%;
   }
   &__img-card {
     height: 427px;
@@ -956,6 +980,11 @@ main {
 .soon {
   position: relative;
   text-align: center;
+  .stars {
+    transform: rotateZ(220deg);
+    top: 160px;
+    left: -25vw;
+  }
   &:before {
     background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
     filter: blur(120px);
@@ -1018,6 +1047,7 @@ main {
     }
   }
   &__planet {
+    will-change: transform;
     animation: scale 5s infinite;
     bottom: -140px;
     height: 188px;
@@ -1050,6 +1080,7 @@ main {
     height: 2px;
     border-radius: 999px;
     filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+    will-change: transform;
     animation:
     tail $shooting-time ease-in-out infinite,
     shooting $shooting-time ease-in-out infinite;
@@ -1080,10 +1111,10 @@ main {
 // keyframes
 @keyframes scale {
   0%, 100%  {
-    transform: scale(1);
+    transform: translateZ(0) scale(1);
   }
   50%  {
-    transform: scale(1.2);
+    transform: translateZ(0) scale(1.2);
   }
 }
 
@@ -1099,10 +1130,10 @@ main {
 
 @keyframes shooting {
   0% {
-    transform: translateX(0);
+    transform: translateZ(0) translateX(0);
   }
 
   100% {
-    transform: translateX(300px);
+    transform: translateZ(0) translateX(300px);
   }
 }

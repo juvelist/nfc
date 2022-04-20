@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebasneuebold.woff2") format("woff2"), url("../fonts/bebasneuebold.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url("../fonts/poppinsbold.woff2") format("woff2"), url("../fonts/poppinsbold.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url("../fonts/poppinsregular.woff2") format("woff2"), url("../fonts/poppinsregular.woff") format("woff");
+  font-display: swap; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -363,7 +378,7 @@ button {
 
 body, select, option, button, textarea, input {
   color: #FFFFFF;
-  font: 400 24px/1.5 'Poppins', sans-serif;
+  font: 400 24px/1.5 'Poppins Regular', sans-serif;
   user-select: none; }
   @media only screen and (max-width: 1024px) {
     body, select, option, button, textarea, input {
@@ -376,13 +391,13 @@ body {
 main {
   background: no-repeat bottom center/auto url("../img/stars_roadmap.png");
   overflow: hidden;
-  padding-bottom: 140px; }
+  padding-bottom: 200px; }
   @media only screen and (max-width: 768px) {
     main {
-      padding-bottom: 120px; } }
+      padding-bottom: 160px; } }
   @media only screen and (max-width: 480px) {
     main {
-      padding-bottom: 80px; } }
+      padding-bottom: 100px; } }
 
 .container {
   margin-left: auto;
@@ -416,7 +431,7 @@ main {
   cursor: pointer;
   position: absolute;
   right: 80px;
-  top: 80px; }
+  top: 60px; }
   @media only screen and (max-width: 768px) {
     .lang {
       right: 40px;
@@ -426,7 +441,7 @@ main {
       right: 24px;
       top: 24px; } }
   .lang__selected {
-    font: 400 24px/1.5 'Poppins', sans-serif;
+    font: 400 24px/1.5 'Poppins Regular', sans-serif;
     height: 40px;
     position: relative;
     padding-right: 14px;
@@ -462,7 +477,7 @@ main {
     text-align: center;
     transition: all .3s ease; }
   .lang__item {
-    font: 400 20px/1.5 'Poppins', sans-serif;
+    font: 400 20px/1.5 'Poppins Regular', sans-serif;
     opacity: .7;
     text-transform: capitalize; }
     @media only screen and (max-width: 480px) {
@@ -613,7 +628,7 @@ main {
           height: 50px;
           width: 50px; } }
   .header__desc {
-    font: 700 16px/1.5 'Poppins', sans-serif;
+    font: 700 16px/1.5 'Poppins Bold', sans-serif;
     transition: opacity .3s ease; }
     @media only screen and (max-width: 480px) {
       .header__desc {
@@ -622,6 +637,7 @@ main {
     object-fit: contain;
     position: absolute; }
     .header__planet_blue {
+      will-change: transform;
       animation: scale 5s infinite;
       height: 188px;
       right: -130px;
@@ -634,6 +650,7 @@ main {
           top: 90px;
           width: 155px; } }
     .header__planet_purple {
+      will-change: transform;
       animation: scale 5s infinite 2.2s;
       bottom: -60px;
       height: 142px;
@@ -681,7 +698,7 @@ main {
     background: linear-gradient(169deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
     border: 1px solid transparent;
     border-radius: 32px;
-    font: 700 22px/60px 'Poppins', sans-serif;
+    font: 700 22px/60px 'Poppins Bold', sans-serif;
     height: 62px;
     padding-left: 32px;
     padding-right: 32px;
@@ -857,7 +874,7 @@ main {
   .timeline__item {
     margin-bottom: 42px; }
     .timeline__item_date {
-      font: 700 36px/36px 'Poppins', sans-serif;
+      font: 700 36px/36px 'Poppins Bold', sans-serif;
       margin-bottom: 16px;
       padding-left: 22px;
       position: relative; }
@@ -928,6 +945,7 @@ main {
         .timeline__item_percent {
           font-size: 16px; } }
   .timeline__planet {
+    will-change: transform;
     animation: scale 4.2s infinite 1s;
     height: 142px;
     object-fit: contain;
@@ -953,9 +971,11 @@ main {
     top: 90%;
     width: 1300px; }
   .roadmap__container {
-    margin-bottom: 120px;
+    margin-bottom: 160px;
     position: relative;
     z-index: 1; }
+    .roadmap__container .stars {
+      top: 160px; }
     @media only screen and (max-width: 767px) {
       .roadmap__container {
         margin-bottom: 80px; } }
@@ -974,35 +994,48 @@ main {
       flex: 0 0 50%;
       min-height: 110px; }
     .roadmap__part_item-wrap {
-      width: 242px; }
+      width: 280px; }
       @media only screen and (max-width: 767px) {
         .roadmap__part_item-wrap {
           margin-bottom: 32px;
           transform: translateX(0) !important;
           width: 256px; } }
+      .roadmap__part_item-wrap.sm {
+        display: none; }
+        @media only screen and (max-width: 767px) {
+          .roadmap__part_item-wrap.sm {
+            display: block; }
+            .roadmap__part_item-wrap.sm + .roadmap__part_item-wrap {
+              display: none; } }
       .roadmap__part_item-wrap-1 {
         transform: translateX(28%); }
         @media only screen and (max-width: 992px) {
           .roadmap__part_item-wrap-1 {
             transform: translateX(10%); } }
       .roadmap__part_item-wrap-2 {
-        transform: translateX(130%); }
+        transform: translateX(105%); }
+        @media only screen and (max-width: 1024px) {
+          .roadmap__part_item-wrap-2 {
+            transform: translateX(55%); } }
         @media only screen and (max-width: 992px) {
           .roadmap__part_item-wrap-2 {
             transform: translateX(70%); } }
+        @media only screen and (max-width: 767px) {
+          .roadmap__part_item-wrap-2 {
+            margin-left: 40px; } }
       .roadmap__part_item-wrap-3 {
         transform: translateX(10%); }
         @media only screen and (max-width: 992px) {
           .roadmap__part_item-wrap-3 {
             transform: translateX(0); } }
-        @media only screen and (max-width: 767px) {
-          .roadmap__part_item-wrap-3 {
-            margin-left: auto; } }
       .roadmap__part_item-wrap-4 {
-        transform: translateX(90%); }
+        transform: translateX(75%); }
+        @media only screen and (max-width: 1024px) {
+          .roadmap__part_item-wrap-4 {
+            transform: translateX(35%); } }
         @media only screen and (max-width: 767px) {
           .roadmap__part_item-wrap-4 {
-            margin-left: auto; } }
+            margin-left: 40px; } }
     .roadmap__part_title {
       background: -webkit-linear-gradient(270deg, #FB37FF 1.7%, #9B6FEE 27.1%, #7B7FEA 61.3%, #1BB2DE 99.5%);
       -webkit-background-clip: text;
@@ -1011,7 +1044,7 @@ main {
       font: 400 24px/1.5 'Bebas Neue', cursive; }
     .roadmap__part_desc {
       color: #E2E2E2;
-      font: 400 14px/16px 'Poppins', sans-serif; }
+      font: 400 14px/16px 'Poppins Regular', sans-serif; }
   .roadmap__line {
     background: linear-gradient(90deg, #7B7FEA 1%, #1BB2DE 19%, #9B6FEE 19%, #7B7FEA 61.3%, #1BB2DE 99.5%) border-box;
     border-radius: 4px;
@@ -1108,6 +1141,7 @@ main {
           .roadmap__line_point-4 {
             left: 93%; } }
   .roadmap__planet {
+    will-change: transform;
     animation: scale 5s infinite 2.2s;
     bottom: -60px;
     height: 142px;
@@ -1123,10 +1157,11 @@ main {
         width: 117px; } }
 
 .about__container {
-  margin-bottom: 120px;
+  align-items: flex-start;
   display: flex;
-  justify-content: space-between; }
-  @media only screen and (max-width: 768px) {
+  justify-content: space-between;
+  margin-bottom: 120px; }
+  @media only screen and (max-width: 1024px) {
     .about__container {
       flex-direction: column; } }
   @media only screen and (max-width: 480px) {
@@ -1136,7 +1171,7 @@ main {
 .about__wrap, .about__img-wrap {
   flex: 0 0 49%; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .about__wrap {
     margin-bottom: 40px; } }
 
@@ -1173,7 +1208,8 @@ main {
         width: 60px; } }
 
 .about__img-wrap {
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
 
 .about__img-card {
   height: 427px;
@@ -1190,6 +1226,10 @@ main {
 .soon {
   position: relative;
   text-align: center; }
+  .soon .stars {
+    transform: rotateZ(220deg);
+    top: 160px;
+    left: -25vw; }
   .soon:before {
     background: linear-gradient(93.51deg, #9B51E0 2%, #3081ED 98%);
     filter: blur(120px);
@@ -1243,6 +1283,7 @@ main {
       object-fit: contain;
       width: 100%; }
   .soon__planet {
+    will-change: transform;
     animation: scale 5s infinite;
     bottom: -140px;
     height: 188px;
@@ -1272,45 +1313,46 @@ main {
     height: 2px;
     border-radius: 999px;
     filter: drop-shadow(0 0 6px #699bff);
+    will-change: transform;
     animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite; }
     .stars__item:nth-child(odd) {
       background: linear-gradient(-45deg, #fc49ef, rgba(0, 0, 255, 0)); }
     .stars__item:nth-child(even) {
       background: linear-gradient(-45deg, #26ffef, rgba(0, 0, 255, 0)); }
     .stars__item:nth-child(1) {
-      top: calc(50% - 148px);
-      left: calc(50% - 205px);
-      animation-delay: 4960ms;
-      opacity: 0.73; }
+      top: calc(50% - 1px);
+      left: calc(50% - 126px);
+      animation-delay: 8778ms;
+      opacity: 0.7; }
       .stars__item:nth-child(1)::before, .stars__item:nth-child(1)::after {
-        animation-delay: 4960ms; }
+        animation-delay: 8778ms; }
     .stars__item:nth-child(2) {
-      top: calc(50% - -44px);
-      left: calc(50% - 37px);
-      animation-delay: 151ms;
-      opacity: 0.65; }
+      top: calc(50% - -109px);
+      left: calc(50% - 109px);
+      animation-delay: 334ms;
+      opacity: 0.84; }
       .stars__item:nth-child(2)::before, .stars__item:nth-child(2)::after {
-        animation-delay: 151ms; }
+        animation-delay: 334ms; }
     .stars__item:nth-child(3) {
-      top: calc(50% - 155px);
-      left: calc(50% - 260px);
-      animation-delay: 6211ms;
-      opacity: 0.53; }
+      top: calc(50% - -146px);
+      left: calc(50% - 276px);
+      animation-delay: 6840ms;
+      opacity: 0.71; }
       .stars__item:nth-child(3)::before, .stars__item:nth-child(3)::after {
-        animation-delay: 6211ms; }
+        animation-delay: 6840ms; }
     .stars__item:nth-child(4) {
-      top: calc(50% - -157px);
-      left: calc(50% - 226px);
-      animation-delay: 5176ms;
-      opacity: 0.66; }
+      top: calc(50% - 131px);
+      left: calc(50% - 194px);
+      animation-delay: 4630ms;
+      opacity: 0.72; }
       .stars__item:nth-child(4)::before, .stars__item:nth-child(4)::after {
-        animation-delay: 5176ms; }
+        animation-delay: 4630ms; }
 
 @keyframes scale {
   0%, 100% {
-    transform: scale(1); }
+    transform: translateZ(0) scale(1); }
   50% {
-    transform: scale(1.2); } }
+    transform: translateZ(0) scale(1.2); } }
 
 @keyframes tail {
   0%, 100% {
@@ -1320,6 +1362,6 @@ main {
 
 @keyframes shooting {
   0% {
-    transform: translateX(0); }
+    transform: translateZ(0) translateX(0); }
   100% {
-    transform: translateX(300px); } }
+    transform: translateZ(0) translateX(300px); } }
