@@ -47,11 +47,15 @@
   <header class="header">
     <div class="header__container container">
       <img src="img/logo.svg" class="header__logo" alt="main logo" width="222" height="205">
-      <h1 class="header__title h-1"
+      <h1 class="header__title h-1" data-translate="NFC token">NFC token</h1>
+      <div class="header__copy-wrapper"
           data-aos="zoom-out"
           data-aos-delay="0"
-          data-aos-duration="600"
-          data-translate="Getting started">Getting started</h1>
+          data-aos-duration="600">
+        <span data-translate="Contract: ">Contract: </span>
+        <input type="text" value="0x2efeda660a7f1e3dB9168799eec28FA276937923" id="contractNo" disabled>
+        <button class="header__copy" id="copyBtn"><span id="copyTooltip">Copy to clipboard</span></button>
+      </div>
       <ul class="header__list">
         <li class="header__item"
             data-aos="zoom-out"
@@ -69,34 +73,7 @@
           <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
             <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
           </a>
-          <p class="header__desc" data-translate="Group 1">Group 1</p>
-        </li>
-        <li class="header__item"
-            data-aos="zoom-out"
-            data-aos-delay="150"
-            data-aos-duration="600">
-          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
-            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
-          </a>
-          <p class="header__desc" data-translate="Group 1">Group 1</p>
-        </li>
-        <li class="header__item"
-            data-aos="zoom-out"
-            data-aos-delay="200"
-            data-aos-duration="600">
-          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
-            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
-          </a>
-          <p class="header__desc" data-translate="Group 1">Group 1</p>
-        </li>
-        <li class="header__item"
-            data-aos="zoom-out"
-            data-aos-delay="250"
-            data-aos-duration="600">
-          <a href="tg://resolve?domain=group" class="header__link" target="_blank" rel="nofollow noopener">
-            <img src="img/telegram_logo.svg" class="header__link_img" alt="link image">
-          </a>
-          <p class="header__desc" data-translate="Group 1">Group 1</p>
+          <p class="header__desc" data-translate="Group 2">Group 2</p>
         </li>
         <li class="header__item"
             data-aos="zoom-out"
@@ -105,7 +82,7 @@
           <a href="https://twitter.com/twitterdev" class="header__link" target="_blank" rel="nofollow noopener">
             <img src="img/twitter_logo.svg" class="header__link_img" alt="link image">
           </a>
-          <p class="header__desc" data-translate="Group 1">Group 1</p>
+          <p class="header__desc" data-translate="Group 3">Group 3</p>
         </li>
       </ul>
       <img src="img/planet_blue.png" class="header__planet header__planet_blue" alt="planet blue">
@@ -181,7 +158,7 @@
              data-aos-duration="600">
           <p class="timeline__item_date"><span data-translate="PRE-SALE">PRE-SALE</span> (25 Nov 2021 – 24 Dec 2021)</p>
           <p class="timeline__item_desc"><span data-translate="Amount:">Amount:</span> 25,000,000,000,000 NFC</p>
-          <p class="timeline__item_desc"><span data-translate="Unit:">Unit:</span> 0.00000002</p>
+          <p class="timeline__item_desc"><span data-translate="Price:">Price:</span> 0.00000002</p>
           <div class="timeline__item_percent-wrap">
             <div class="timeline__item_line"></div>
             <div class="timeline__item_percent">100%</div>
@@ -193,7 +170,7 @@
              data-aos-duration="600">
           <p class="timeline__item_date"><span data-translate="PRE-SALE">PRE-SALE</span> (25 Nov 2021 – 24 Dec 2021)</p>
           <p class="timeline__item_desc"><span data-translate="Amount:">Amount:</span> 25,000,000,000,000 NFC</p>
-          <p class="timeline__item_desc"><span data-translate="Unit:">Unit:</span> 0.00000004</p>
+          <p class="timeline__item_desc"><span data-translate="Price:">Price:</span> 0.00000004</p>
           <div class="timeline__item_percent-wrap">
             <div class="timeline__item_line"></div>
             <div class="timeline__item_percent">100%</div>
@@ -205,7 +182,7 @@
              data-aos-duration="600">
           <p class="timeline__item_date"><span data-translate="PRE-SALE">PRE-SALE</span> (25 Nov 2021 – 24 Dec 2021)</p>
           <p class="timeline__item_desc"><span data-translate="Amount:">Amount:</span> 25,000,000,000,000 NFC</p>
-          <p class="timeline__item_desc"><span data-translate="Unit:">Unit:</span> 0.00000006</p>
+          <p class="timeline__item_desc"><span data-translate="Price:">Price:</span> 0.00000006</p>
           <div class="timeline__item_percent-wrap">
             <div class="timeline__item_line"></div>
             <div class="timeline__item_percent">100%</div>
@@ -217,7 +194,7 @@
              data-aos-duration="600">
           <p class="timeline__item_date"><span data-translate="PRE-SALE">PRE-SALE</span> (25 Nov 2021 – 24 Dec 2021)</p>
           <p class="timeline__item_desc"><span data-translate="Amount:">Amount:</span> 25,000,000,000,000 NFC</p>
-          <p class="timeline__item_desc"><span data-translate="Unit:">Unit:</span> 0.00000008</p>
+          <p class="timeline__item_desc"><span data-translate="Price:">Price:</span> 0.00000008</p>
           <div class="timeline__item_percent-wrap">
             <div class="timeline__item_line"></div>
             <div class="timeline__item_percent">100%</div>
@@ -333,7 +310,7 @@
             data-aos="zoom-out"
             data-aos-delay="500"
             data-aos-duration="600"
-            data-translate="Soon">Soon</h2>
+            data-translate="Coming Soon">Coming Soon</h2>
         <div class="soon__store">
           <a href="https://play.google.com/store" class="soon__store_link" target="_blank" rel="nofollow noopener"
             data-aos="zoom-out"

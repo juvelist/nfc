@@ -1,8 +1,31 @@
 // AOS animation
 AOS.init();
 
-// lang
+function copyContractNo() {
+  var copyText = document.getElementById("contractNo");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  navigator.clipboard.writeText(copyText.value);
+  console.log("Copied the text: " + copyText.value);
+
+  var tooltip = document.getElementById("copyTooltip");
+  tooltip.innerHTML = "Copied";
+}
+
+function copyTooltip() {
+  var tooltip = document.getElementById("copyTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+
 $(document).ready(function(){
+  $('#copyBtn')
+      .click(copyContractNo)
+      .mouseout(copyTooltip)
+
+
+  // lang
   var dictionary, set_lang, en, es;
 
   // $.getJSON("../locales/en.json", function(json) {

@@ -1,7 +1,8 @@
 // global styles
-body, select, option, button, textarea {
+body, select, option, button, textarea, input {
   color: $textWhite;
   font: 400 24px/1.5 'Poppins', sans-serif;
+  user-select: none;
   @media only screen and (max-width: 1024px) {
     font-size: 16px;
   }
@@ -147,7 +148,79 @@ main {
     }
   }
   &__title {
-    margin-bottom: 60px;
+    height: 0;
+    visibility: hidden;
+    text-indent: -2000px;
+  }
+  &__copy-wrapper {
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 90%;
+    width: 800px;
+    @media only screen and (max-width: 1024px) {
+      font-size: 18px;
+    }
+    & > input {
+      background-color: transparent;
+      color: $textWhite;
+      display: inline-block;
+      flex-grow: 1;
+      font-size: inherit;
+      margin: 0 24px;
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+      user-select: none;
+      white-space: nowrap;
+      @media only screen and (max-width: 1024px) {
+        margin: 0 16px;
+      }
+    }
+  }
+  &__copy {
+    background: no-repeat center/contain url('../img/copy-icon.svg');
+    height: 32px;
+    position: relative;
+    width: 32px;
+    &:hover > span {
+      visibility: visible;
+      opacity: 1;
+    }
+    & > span {
+      bottom: 150%;
+      background-color: #555;
+      border-radius: 6px;
+      color: $textWhite;
+      font-size: 12px;
+      left: 50%;
+      min-width: 40px;
+      opacity: 0;
+      padding: 5px;
+      position: absolute;
+      text-align: center;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+      visibility: hidden;
+      white-space: nowrap;
+      z-index: 1;
+      @media only screen and (max-width: 480px) {
+        width: 80px;
+        white-space: initial;
+      }
+      &:after {
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        content: "";
+        left: 50%;
+        margin-left: -5px;
+        position: absolute;
+        top: 100%;
+      }
+    }
   }
   &__list {
     display: flex;
@@ -277,7 +350,7 @@ main {
     @media only screen and (max-width: 1024px) {
       margin-bottom: 32px;
     }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       flex-direction: column;
     }
   }
@@ -1010,7 +1083,7 @@ main {
     transform: scale(1);
   }
   50%  {
-    transform: scale(1.08);
+    transform: scale(1.2);
   }
 }
 
