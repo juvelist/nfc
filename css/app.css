@@ -397,7 +397,7 @@ main {
       padding-bottom: 160px; } }
   @media only screen and (max-width: 480px) {
     main {
-      padding-bottom: 100px; } }
+      padding-bottom: 120px; } }
 
 .container {
   margin-left: auto;
@@ -1186,6 +1186,9 @@ main {
 .about__desc {
   margin-bottom: 28px;
   letter-spacing: .5px; }
+  @media only screen and (max-width: 480px) {
+    .about__desc {
+      font-size: 14px; } }
 
 .about__payment {
   display: flex;
@@ -1326,33 +1329,33 @@ main {
     .stars__item:nth-child(even) {
       background: linear-gradient(-45deg, #26ffef, rgba(0, 0, 255, 0)); }
     .stars__item:nth-child(1) {
-      top: calc(50% - -69px);
-      left: calc(50% - 286px);
-      animation-delay: 2280ms;
-      opacity: 0.86; }
+      top: calc(50% - 59px);
+      left: calc(50% - 255px);
+      animation-delay: 2764ms;
+      opacity: 0.8; }
       .stars__item:nth-child(1)::before, .stars__item:nth-child(1)::after {
-        animation-delay: 2280ms; }
+        animation-delay: 2764ms; }
     .stars__item:nth-child(2) {
-      top: calc(50% - -37px);
-      left: calc(50% - 281px);
-      animation-delay: 4879ms;
-      opacity: 0.58; }
+      top: calc(50% - 194px);
+      left: calc(50% - 212px);
+      animation-delay: 2855ms;
+      opacity: 0.81; }
       .stars__item:nth-child(2)::before, .stars__item:nth-child(2)::after {
-        animation-delay: 4879ms; }
+        animation-delay: 2855ms; }
     .stars__item:nth-child(3) {
-      top: calc(50% - 176px);
-      left: calc(50% - 87px);
-      animation-delay: 5266ms;
-      opacity: 0.83; }
+      top: calc(50% - 16px);
+      left: calc(50% - 221px);
+      animation-delay: 3365ms;
+      opacity: 0.51; }
       .stars__item:nth-child(3)::before, .stars__item:nth-child(3)::after {
-        animation-delay: 5266ms; }
+        animation-delay: 3365ms; }
     .stars__item:nth-child(4) {
-      top: calc(50% - -138px);
-      left: calc(50% - 18px);
-      animation-delay: 4409ms;
-      opacity: 0.94; }
+      top: calc(50% - -73px);
+      left: calc(50% - 216px);
+      animation-delay: 2240ms;
+      opacity: 1; }
       .stars__item:nth-child(4)::before, .stars__item:nth-child(4)::after {
-        animation-delay: 4409ms; }
+        animation-delay: 2240ms; }
 
 @keyframes scale {
   0%, 100% {
