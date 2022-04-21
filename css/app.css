@@ -411,10 +411,14 @@ main {
   padding: 32px;
   background: linear-gradient(177deg, #2b2e4e 1%, #292847 99%) padding-box, linear-gradient(177deg, #FB37FF 1%, #211c2a 30%, #211c2a 70%, #1BB2DE 99%) border-box;
   border: 1px solid transparent; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 767px) {
     .card {
       border-radius: 24px;
       padding: 24px; } }
+  @media only screen and (max-width: 480px) {
+    .card {
+      border-radius: 24px;
+      padding: 12px; } }
 
 .h-1, .h-2 {
   font: 400 56px/1.3 'Bebas Neue', cursive;
@@ -725,6 +729,9 @@ main {
     border-radius: 32px;
     margin-bottom: 48px;
     padding: 24px; }
+    @media only screen and (max-width: 480px) {
+      .buy__amount {
+        padding: 16px; } }
     .buy__amount_enter {
       opacity: .6; }
     .buy__amount_balance {
@@ -760,8 +767,9 @@ main {
     display: flex;
     justify-content: space-between; }
     @media only screen and (max-width: 480px) {
-      .buy__amount-wrap {
-        flex-direction: column; } }
+      .buy__amount-wrap > div,
+      .buy__amount-wrap > p {
+        font-size: 14px; } }
     .buy__amount-wrap:not(:last-child) {
       margin-bottom: 16px; }
     .buy__amount-wrap > p,
@@ -781,8 +789,8 @@ main {
     display: flex;
     justify-content: space-between; }
     @media only screen and (max-width: 480px) {
-      .buy__price-wrap {
-        flex-direction: column; } }
+      .buy__price-wrap > p {
+        font-size: 14px; } }
     .buy__price-wrap:not(:last-child) {
       margin-bottom: 16px; }
     .buy__price-wrap > p,
@@ -1017,9 +1025,6 @@ main {
         @media only screen and (max-width: 1024px) {
           .roadmap__part_item-wrap-2 {
             transform: translateX(55%); } }
-        @media only screen and (max-width: 992px) {
-          .roadmap__part_item-wrap-2 {
-            transform: translateX(70%); } }
         @media only screen and (max-width: 767px) {
           .roadmap__part_item-wrap-2 {
             margin-left: 40px; } }
@@ -1213,15 +1218,16 @@ main {
 
 .about__img-card {
   height: 427px;
-  transform: translateY(33px);
+  transform: translateY(34px);
   width: 425px; }
   @media only screen and (max-width: 768px) {
     .about__img-card {
       height: 214px;
+      transform: translateY(25px);
       width: 213px; } }
   @media only screen and (max-width: 480px) {
     .about__img-card {
-      transform: translateY(25px); } }
+      transform: translateY(13px); } }
 
 .soon {
   position: relative;
@@ -1320,33 +1326,33 @@ main {
     .stars__item:nth-child(even) {
       background: linear-gradient(-45deg, #26ffef, rgba(0, 0, 255, 0)); }
     .stars__item:nth-child(1) {
-      top: calc(50% - 1px);
-      left: calc(50% - 126px);
-      animation-delay: 8778ms;
-      opacity: 0.7; }
+      top: calc(50% - -69px);
+      left: calc(50% - 286px);
+      animation-delay: 2280ms;
+      opacity: 0.86; }
       .stars__item:nth-child(1)::before, .stars__item:nth-child(1)::after {
-        animation-delay: 8778ms; }
+        animation-delay: 2280ms; }
     .stars__item:nth-child(2) {
-      top: calc(50% - -109px);
-      left: calc(50% - 109px);
-      animation-delay: 334ms;
-      opacity: 0.84; }
+      top: calc(50% - -37px);
+      left: calc(50% - 281px);
+      animation-delay: 4879ms;
+      opacity: 0.58; }
       .stars__item:nth-child(2)::before, .stars__item:nth-child(2)::after {
-        animation-delay: 334ms; }
+        animation-delay: 4879ms; }
     .stars__item:nth-child(3) {
-      top: calc(50% - -146px);
-      left: calc(50% - 276px);
-      animation-delay: 6840ms;
-      opacity: 0.71; }
+      top: calc(50% - 176px);
+      left: calc(50% - 87px);
+      animation-delay: 5266ms;
+      opacity: 0.83; }
       .stars__item:nth-child(3)::before, .stars__item:nth-child(3)::after {
-        animation-delay: 6840ms; }
+        animation-delay: 5266ms; }
     .stars__item:nth-child(4) {
-      top: calc(50% - 131px);
-      left: calc(50% - 194px);
-      animation-delay: 4630ms;
-      opacity: 0.72; }
+      top: calc(50% - -138px);
+      left: calc(50% - 18px);
+      animation-delay: 4409ms;
+      opacity: 0.94; }
       .stars__item:nth-child(4)::before, .stars__item:nth-child(4)::after {
-        animation-delay: 4630ms; }
+        animation-delay: 4409ms; }
 
 @keyframes scale {
   0%, 100% {
