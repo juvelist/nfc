@@ -743,26 +743,13 @@ main {
           align-items: baseline; } }
     .buy__amount_currency {
       cursor: pointer;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 700;
       padding-right: 12px;
       position: relative; }
       @media only screen and (max-width: 480px) {
         .buy__amount_currency {
           display: inline-flex; } }
-      .buy__amount_currency:before {
-        bottom: 36%;
-        background: no-repeat center/contain url("../img/arrow_icon.svg");
-        content: '';
-        height: 6px;
-        position: absolute;
-        right: 0;
-        transition: transform .3s ease;
-        width: 8px; }
-      .buy__amount_currency.active {
-        pointer-events: none; }
-        .buy__amount_currency.active:before {
-          transform: rotate(-180deg); }
   .buy__amount-wrap {
     display: flex;
     justify-content: space-between; }
@@ -1329,33 +1316,33 @@ main {
     .stars__item:nth-child(even) {
       background: linear-gradient(-45deg, #26ffef, rgba(0, 0, 255, 0)); }
     .stars__item:nth-child(1) {
-      top: calc(50% - 59px);
-      left: calc(50% - 255px);
-      animation-delay: 2764ms;
-      opacity: 0.8; }
+      top: calc(50% - 199px);
+      left: calc(50% - 22px);
+      animation-delay: 4290ms;
+      opacity: 0.53; }
       .stars__item:nth-child(1)::before, .stars__item:nth-child(1)::after {
-        animation-delay: 2764ms; }
+        animation-delay: 4290ms; }
     .stars__item:nth-child(2) {
-      top: calc(50% - 194px);
-      left: calc(50% - 212px);
-      animation-delay: 2855ms;
-      opacity: 0.81; }
+      top: calc(50% - -70px);
+      left: calc(50% - 259px);
+      animation-delay: 5461ms;
+      opacity: 0.89; }
       .stars__item:nth-child(2)::before, .stars__item:nth-child(2)::after {
-        animation-delay: 2855ms; }
+        animation-delay: 5461ms; }
     .stars__item:nth-child(3) {
-      top: calc(50% - 16px);
-      left: calc(50% - 221px);
-      animation-delay: 3365ms;
-      opacity: 0.51; }
+      top: calc(50% - 27px);
+      left: calc(50% - 240px);
+      animation-delay: 388ms;
+      opacity: 0.74; }
       .stars__item:nth-child(3)::before, .stars__item:nth-child(3)::after {
-        animation-delay: 3365ms; }
+        animation-delay: 388ms; }
     .stars__item:nth-child(4) {
-      top: calc(50% - -73px);
-      left: calc(50% - 216px);
-      animation-delay: 2240ms;
-      opacity: 1; }
+      top: calc(50% - -179px);
+      left: calc(50% - 207px);
+      animation-delay: 3917ms;
+      opacity: 0.64; }
       .stars__item:nth-child(4)::before, .stars__item:nth-child(4)::after {
-        animation-delay: 2240ms; }
+        animation-delay: 3917ms; }
 
 @keyframes scale {
   0%, 100% {
