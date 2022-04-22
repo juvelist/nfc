@@ -3,6 +3,7 @@ AOS.init({
   offset: 40
 });
 
+// copy to clipboard
 function copyContractNo() {
   var copyText = document.getElementById("contractNo");
   copyText.select();
@@ -25,13 +26,13 @@ $(document).ready(function(){
       .mouseout(copyTooltip)
 
   // lang
-  var dictionary, set_lang, en, es;
+  var dictionary, set_lang, en, ru;
 
   // $.getJSON("../locales/en.json", function(json) {
   //   en = json
   // });
-  // $.getJSON("../locales/es.json", function(json) {
-  //   es = json
+  // $.getJSON("../locales/ru.json", function(json) {
+  //   ru = json
   // });
 
   // Object literal behaving as multi-dictionary
